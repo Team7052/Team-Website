@@ -13,7 +13,6 @@ body {
 
 .home-page {
   display: grid;
-
   grid-template-columns: 100vw;
   grid-auto-rows: auto;
   grid-auto-flow: row;
@@ -60,6 +59,10 @@ body {
   /* Can change blur amount when working with different images */
   filter: blur(5px);
   transform: scale(1.1);
+}
+
+.home-subsection {
+  margin-top: 5vh;
 }
 
 #home-main-title {
@@ -188,4 +191,94 @@ body {
   align-self: end;
 
   box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.4), 0 12px 30px 0 rgba(0, 0, 0, 0.4);
+}
+
+/* Home Media section */
+#home-media-section {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+}
+
+#home-media-background-image {
+  /* Set the background image with a 40% opacity gray overlay */
+  /* Change the gray value and opacity depending on background image and visibilty of text */
+  background-image: linear-gradient(rgba(152,152,152, 0.25), rgba(152,152,152, 0.25)), url("public/images/main-image.jpg");
+  /* Only 1 copy of the background is used (don't tile) */
+  background-repeat: no-repeat;
+  /* Cover whole entire div */
+  background-size: cover;
+  /* Center the image in the div */
+  background-position: center;
+  display: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 25vh;
+  transform: scale(1.1);
+
+  filter: blur(5px);
+}
+
+
+#home-media-section>#home-media-row {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 3fr 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "title facebook insta youtube gallery"
+    "title facebook insta youtube news";
+  flex-direction: row;
+  align-items: center;
+  justify-items: center;
+  position: absolute;
+  top: 0;
+  height: 25vh;
+  left: 5vw;
+  right: 0;
+}
+
+#home-media-row>h1 {
+  color: white;
+  grid-area: title;
+  justify-self: start;
+  margin-top: auto;
+}
+
+#home-media-row img {
+  height: 35%;
+}
+
+#home-media-row #facebookLogo {
+  grid-area: facebook;
+}
+#home-media-row #instagramLogo {
+  grid-area: insta;
+}
+#home-media-row #youtubeLogo {
+  grid-area: youtube;
+}
+#home-media-row>#galleryLink {
+  align-self: end;
+  margin-bottom: 15px;
+  grid-area: gallery;
+}
+#home-media-row>#newsLink {
+  grid-area: news;
+  align-self: start;
+  margin: top: 15px;
+}
+.custom-underlined-link {
+  color: white;
+  text-decoration: none;
+  font-weight: 300;
+  font-size: 18px;
+  border-bottom: 2px solid rgba(255,255,255,0.4);
+  transition: all 0.5s ease;
+  justify-self: center;
+  text-align: center;
+}
+.custom-underlined-link:hover {
+  color: black;
+  border-bottom: 2px solid rgba(0,0,0,0.4);
 }
