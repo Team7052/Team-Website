@@ -1,0 +1,64 @@
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.navbar {
+  /* Set all text colour to white, align to center, and light font */
+  color: white;
+  text-align: center;
+  font-weight: 300;
+  font-size: 24px;
+
+  /* Flex display in a row - span whole width */
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  align-content: flex-end;
+
+  /* Set navbar height to 75px and 80% width and center */
+  height: 75px;
+  width: 80vw;
+
+  /* Position navbar to the center */
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.navbar-element {
+  /* Same spacing for all nav elements */
+  flex-grow: 1;
+  /* Give all nav elements a margin */
+  margin: 5px;
+}
+
+.navbar-logo-image {
+  /* Logo is the same height as navbar */
+  height: inherit;
+  /* Padding to right to offset the rest of the nav elements */
+  margin-right: 80px;
+}
+
+.main-background-div-home {
+  /* Set the background image with a 40% opacity gray overlay */
+  /* Change the gray value and opacity depending on background image and visibilty of text */
+  background-image: linear-gradient(rgba(152,152,152, 0.25), rgba(152,152,152, 0.25)), url("public/images/main-image.jpg");
+  /* Only 1 copy of the background is used (don't tile) */
+  background-repeat: no-repeat;
+  /* Cover whole entire div */
+  background-size: cover;
+  /* Center the image in the div */
+  background-position: center;
+
+  /* Position the div to fit the whole screen */
+  position: absolute;
+  top: -2vh;
+  left: -2vw;
+  width: 104vw;
+  height: 102vh;
+
+  /* Apply a blur to the image */
+  filter: blur(10px);
+}
