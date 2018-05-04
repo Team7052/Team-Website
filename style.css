@@ -1,8 +1,39 @@
-body {
+html {
+  /* Set global font family */
   font-family: "Source Sans Pro", sans-serif;
+}
+
+body {
+  /* Get rid of auto browser margin and padding */
   margin: 0;
   padding: 0;
+  /* Overflow hidden constrains all elements to be inside of the window */
+  overflow: hidden;
 }
+
+.main-background-div-home {
+  /* Set the background image with a 40% opacity gray overlay */
+  /* Change the gray value and opacity depending on background image and visibilty of text */
+  background-image: linear-gradient(rgba(152,152,152, 0.25), rgba(152,152,152, 0.25)), url("public/images/main-image.jpg");
+  /* Only 1 copy of the background is used (don't tile) */
+  background-repeat: no-repeat;
+  /* Cover whole entire div */
+  background-size: cover;
+  /* Center the image in the div */
+  background-position: center;
+
+  /* Position the div to fit the whole screen */
+  position: absolute;
+  top: -2vh;
+  left: -2vw;
+  width: 104vw;
+  height: 102vh;
+
+  /* Apply a blur to the image */
+  /* Can change blur amount when working with different images */
+  filter: blur(5px);
+}
+
 .navbar {
   /* Set all text colour to white, align to center, and light font */
   color: white;
@@ -41,24 +72,50 @@ body {
   margin-right: 80px;
 }
 
-.main-background-div-home {
-  /* Set the background image with a 40% opacity gray overlay */
-  /* Change the gray value and opacity depending on background image and visibilty of text */
-  background-image: linear-gradient(rgba(152,152,152, 0.25), rgba(152,152,152, 0.25)), url("public/images/main-image.jpg");
-  /* Only 1 copy of the background is used (don't tile) */
-  background-repeat: no-repeat;
-  /* Cover whole entire div */
-  background-size: cover;
-  /* Center the image in the div */
-  background-position: center;
+.home-main-title {
+  /* Set white font color, big text size, and semibolded weight  */
+  color: white;
+  font-size: 8vw; /* 8% of the width of the screen */
+  font-weight: 500; /* Semi-bold */
 
-  /* Position the div to fit the whole screen */
+  /* Set position to be in the center and 25% from the top */
   position: absolute;
-  top: -2vh;
-  left: -2vw;
-  width: 104vw;
-  height: 102vh;
+  left: 50%;
+  top: 30%;
+  transform: translate(-50%, -30%);
+}
 
-  /* Apply a blur to the image */
-  filter: blur(10px);
+.home-main-subtitle {
+  /* Set white font color, regular sized text, and light font weight */
+  color: white;
+  font-size: 18px;
+  font-weight: 300;
+
+  /* Align text center*/
+  text-align: center;
+  line-height: 36px;
+  width: 60%;
+
+  /* Set position to be in the center and 50% from the top */
+  position: absolute;
+  left: 50%;
+  top: 55%;
+  transform: translate(-50%, -18px);
+}
+
+.home-main-location {
+  /* Set white font color, slightly large sized text, and light font weight */
+  color: white;
+  font-size: 32px;
+  font-weight: 300;
+
+  /* Align text center */
+  text-align: center;
+  width: 60%;
+
+  /* Set position to be in the center and 75% from the top */
+  position: absolute;
+  left: 50%;
+  top: 80%;
+  transform: translate(-50%, -80%);
 }
