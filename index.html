@@ -3,26 +3,41 @@
 <html>
   <head>
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900" rel="stylesheet">
-    <link href="style.css" rel="stylesheet" type="text/css">
+    <link href="homeStyle.css" rel="stylesheet" type="text/css">
+    <link href="globalStyle.css" rel="stylesheet" type="text/css">
     <title>Team 7052</title>
   </head>
   <body>
-    <!-- Create main background blurred image -->
-    <div class="main-background-div-home"></div>
-    <!-- Create navigation bar -->
-    <div class="navbar">
-      <img class="navbar-logo-image "src="public/images/logo.png">
-      <div class="navbar-element">Home</div>
-      <div class="navbar-element navbar-dropdown-section">About</div>
-      <div class="navbar-element navbar-dropdown-section">Outreach</div>
-      <div class="navbar-element navbar-dropdown-section">Media</div>
-      <div class="navbar-element navbar-dropdown-section">Sponsors</div>
-      <div class="navbar-element navbar-dropdown-section">Resources</div>
+    <div class="home-main-container">
+      <!-- Create main background blurred image -->
+      <div class="home-main-background-image"></div>
+      <!-- Create navigation bar -->
+      <div class="navbar">
+        <img class="navbar-logo-image "src="public/images/logo.png">
+        <div class="navbar-element"><a href="index.html">Home</a></div>
+        <div class="navbar-element navbar-dropdown-section"><a href="#">About</a></div>
+        <div class="navbar-element navbar-dropdown-section"><a href="#">Outreach</a></div>
+        <div class="navbar-element navbar-dropdown-section"><a href="#">Media</a></div>
+        <div class="navbar-element navbar-dropdown-section"><a href="#">Sponsors</a></div>
+        <div class="navbar-element navbar-dropdown-section"><a href="#">Resources</a></div>
+      </div>
+
+      <!-- Content that is in the home page, when user first loads screen -->
+      <div class="home-main-title">Falcotronix</div>
+      <p class="home-main-subtitle">Team 7052 is a competitive robotics team from St. Ignatius High School and provides opportunities for all students to experience real world engineering through robotics.</p>
+      <p class="home-main-location">Located in Thunder Bay, Ontario</p>
     </div>
 
-    <!-- Content that is in the home page, when user first loads screen -->
-    <div class="home-main-title">Falcotronix</div>
-    <p class="home-main-subtitle">Team 7052 is a competitive robotics team from St. Ignatius High School and provides opportunities for all students to experience real world engineering through robotics.</p>
-    <p class="home-main-location">Located in Thunder Bay, Ontario</p>
+    <!-- About page screen -->
+    <div class="home-about-section">
+      <h1>About Us</h1>
+      <p>Falcotronix is a high school robotics team from St. Ignatius. We are part of FIRST Robotics, a world-wide high school robotics competition. Our mission is to promote STEM (Science, Technology, Engineering and Math) education in a team environment across Northwestern Ontario.</p>
+      <a class="underlined-link" href="#">Read More</a>
+      <div class="home-about-image"></div>
+    </div>
+
+    <div class="home-outreach-section">
+      <h1>Outreach</h1>
+    </div>
   </body>
 </html>

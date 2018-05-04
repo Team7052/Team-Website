@@ -8,10 +8,28 @@ body {
   margin: 0;
   padding: 0;
   /* Overflow hidden constrains all elements to be inside of the window */
-  overflow: hidden;
+  overflow-x: hidden;
+  display: grid;
+
+  grid-template-columns: 100vw;
+  grid-auto-rows: auto;
+  grid-auto-flow: row;
+}
+.navbar-element a {
+  /* Get rid of default underline */
+  text-decoration: none;
+  /* Inherit color fron navbar element */
+  color: inherit;
 }
 
-.main-background-div-home {
+.home-main-container {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.home-main-background-image {
   /* Set the background image with a 40% opacity gray overlay */
   /* Change the gray value and opacity depending on background image and visibilty of text */
   background-image: linear-gradient(rgba(152,152,152, 0.25), rgba(152,152,152, 0.25)), url("public/images/main-image.jpg");
@@ -24,14 +42,15 @@ body {
 
   /* Position the div to fit the whole screen */
   position: absolute;
-  top: -2vh;
-  left: -2vw;
-  width: 104vw;
-  height: 102vh;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
 
   /* Apply a blur to the image */
   /* Can change blur amount when working with different images */
   filter: blur(5px);
+  transform: scale(1.1);
 }
 
 .navbar {
@@ -88,7 +107,7 @@ body {
 .home-main-subtitle {
   /* Set white font color, regular sized text, and light font weight */
   color: white;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 300;
 
   /* Align text center*/
@@ -118,4 +137,49 @@ body {
   left: 50%;
   top: 80%;
   transform: translate(-50%, -80%);
+}
+
+.home-about-section {
+  background-color: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  grid-template-areas:
+    "title image"
+    "paragraph image"
+    "link image";
+  margin-left: 5vw;
+  justify-items: start;
+}
+
+.home-about-section>h1 {
+  grid-area: title;
+  font-weight: 600;
+  font-size: 5vw;
+  margin-top: 10vh;
+}
+
+.home-about-section>p {
+  grid-area: paragraph;
+  font-weight: 300;
+  font-size: calc(12px + 1vw);
+  line-height: 2.5;
+  margin-top: -10px;
+}
+.home-about-section>.underlined-link {
+  grid-area: link;
+  justify-self: end;
+}
+
+.home-about-section>.home-about-image {
+  grid-area: image;
+  background: linear-gradient(rgba(154,154,154,0.25), rgba(154,154,154,0.25)), url("public/images/main-image.jpg");
+  background-position: left;
+  background-size: cover;
+  width: 75%;
+  height: 90%;
+  margin: 0 auto;
+  align-self: end;
+
+  box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.4), 0 12px 30px 0 rgba(0, 0, 0, 0.4);
 }
