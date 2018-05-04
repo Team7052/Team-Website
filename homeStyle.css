@@ -9,17 +9,26 @@ body {
   padding: 0;
   /* Overflow hidden constrains all elements to be inside of the window */
   overflow-x: hidden;
+}
+
+.home-page {
   display: grid;
 
   grid-template-columns: 100vw;
   grid-auto-rows: auto;
   grid-auto-flow: row;
 }
-.navbar-element a {
-  /* Get rid of default underline */
-  text-decoration: none;
-  /* Inherit color fron navbar element */
-  color: inherit;
+
+.home-page p {
+  font-weight: 300;
+  font-size: calc(12px + 1vw);
+  line-height: 2.5;
+}
+
+.home-page h1 {
+  font-weight: 600;
+  font-size: 5vw;
+  margin-top: 10vh;
 }
 
 .home-main-container {
@@ -53,49 +62,11 @@ body {
   transform: scale(1.1);
 }
 
-.navbar {
-  /* Set all text colour to white, align to center, and light font */
-  color: white;
-  text-align: center;
-  font-weight: 300;
-  font-size: 24px;
-
-  /* Flex display in a row - span whole width */
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  align-content: flex-end;
-
-  /* Set navbar height to 75px and 80% width and center */
-  height: 75px;
-  width: 80vw;
-
-  /* Position navbar to the center */
-  position: absolute;
-  top: 10px;
-  left: 50%;
-  transform: translate(-50%, 0);
-}
-
-.navbar-element {
-  /* Same spacing for all nav elements */
-  flex-grow: 1;
-  /* Give all nav elements a margin */
-  margin: 5px;
-}
-
-.navbar-logo-image {
-  /* Logo is the same height as navbar */
-  height: inherit;
-  /* Padding to right to offset the rest of the nav elements */
-  margin-right: 80px;
-}
-
-.home-main-title {
+#home-main-title {
   /* Set white font color, big text size, and semibolded weight  */
   color: white;
   font-size: 8vw; /* 8% of the width of the screen */
-  font-weight: 500; /* Semi-bold */
+  font-weight: 600; /* Semi-bold */
 
   /* Set position to be in the center and 25% from the top */
   position: absolute;
@@ -104,7 +75,7 @@ body {
   transform: translate(-50%, -30%);
 }
 
-.home-main-subtitle {
+#home-main-subtitle {
   /* Set white font color, regular sized text, and light font weight */
   color: white;
   font-size: 20px;
@@ -112,7 +83,7 @@ body {
 
   /* Align text center*/
   text-align: center;
-  line-height: 36px;
+  line-height: 2;
   width: 60%;
 
   /* Set position to be in the center and 50% from the top */
@@ -122,7 +93,7 @@ body {
   transform: translate(-50%, -18px);
 }
 
-.home-main-location {
+#home-main-location {
   /* Set white font color, slightly large sized text, and light font weight */
   color: white;
   font-size: 32px;
@@ -139,7 +110,7 @@ body {
   transform: translate(-50%, -80%);
 }
 
-.home-about-section {
+#home-about-section {
   background-color: white;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -150,35 +121,70 @@ body {
     "link image";
   margin-left: 5vw;
   justify-items: start;
+  z-index: 2;
 }
 
-.home-about-section>h1 {
+#home-about-section>h1 {
   grid-area: title;
-  font-weight: 600;
-  font-size: 5vw;
-  margin-top: 10vh;
 }
 
-.home-about-section>p {
+#home-about-section>p {
   grid-area: paragraph;
-  font-weight: 300;
-  font-size: calc(12px + 1vw);
-  line-height: 2.5;
   margin-top: -10px;
 }
-.home-about-section>.underlined-link {
+#home-about-section>.underlined-link {
   grid-area: link;
   justify-self: end;
 }
 
-.home-about-section>.home-about-image {
+#home-about-section>#home-about-image {
   grid-area: image;
   background: linear-gradient(rgba(154,154,154,0.25), rgba(154,154,154,0.25)), url("public/images/main-image.jpg");
   background-position: left;
   background-size: cover;
   width: 75%;
   height: 90%;
-  margin: 0 auto;
+  justify-self: end;
+  margin-right: 5vw;
+  align-self: end;
+
+  box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.4), 0 12px 30px 0 rgba(0, 0, 0, 0.4);
+}
+
+#home-outreach-section {
+  z-index: 1;
+  background-color: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  grid-template-areas:
+    "image title"
+    "image paragraph"
+    "image link";
+  padding-right: 5vw;
+  justify-items: end;
+}
+
+#home-outreach-section>h1 {
+  grid-area: title;
+}
+#home-outreach-section>p {
+  grid-area: paragraph;
+  text-align: right;
+  margin-top: -10px;
+}
+#home-outreach-section>.underlined-link {
+  grid-area: link;
+}
+#home-outreach-section>#home-outreach-image {
+  grid-area: image;
+  background: linear-gradient(rgba(154,154,154,0.25), rgba(154,154,154,0.25)), url("public/images/main-image.jpg");
+  background-position: left;
+  background-size: cover;
+  width: 75%;
+  height: 90%;
+  justify-self: start;
+  margin-left: 5vw;
   align-self: end;
 
   box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.4), 0 12px 30px 0 rgba(0, 0, 0, 0.4);

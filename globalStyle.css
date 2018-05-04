@@ -1,10 +1,19 @@
 .underlined-link {
   display: inline;
   text-decoration: none;
+
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 300;
   font-size: 18px;
   color: #FF0000;
+
   padding-bottom: 2px;
   border-bottom: 2px solid rgba(255,0,0,0.40);
+
+  transition: all 0.5s ease;
+}
+
+.underlined-link:hover {
+  color: black;
+  border-bottom: 2px solid rgba(0,0,0,0.40);
 }

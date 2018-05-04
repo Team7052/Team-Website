@@ -4,40 +4,52 @@
   <head>
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900" rel="stylesheet">
     <link href="homeStyle.css" rel="stylesheet" type="text/css">
+    <link href="navbarStyle.css" rel="stylesheet" type="text/css">
     <link href="globalStyle.css" rel="stylesheet" type="text/css">
     <title>Team 7052</title>
   </head>
   <body>
-    <div class="home-main-container">
-      <!-- Create main background blurred image -->
-      <div class="home-main-background-image"></div>
-      <!-- Create navigation bar -->
-      <div class="navbar">
-        <img class="navbar-logo-image "src="public/images/logo.png">
-        <div class="navbar-element"><a href="index.html">Home</a></div>
-        <div class="navbar-element navbar-dropdown-section"><a href="#">About</a></div>
-        <div class="navbar-element navbar-dropdown-section"><a href="#">Outreach</a></div>
-        <div class="navbar-element navbar-dropdown-section"><a href="#">Media</a></div>
-        <div class="navbar-element navbar-dropdown-section"><a href="#">Sponsors</a></div>
-        <div class="navbar-element navbar-dropdown-section"><a href="#">Resources</a></div>
+    <div class="home-page">
+      <div class="home-main-container">
+        <!-- Create main background blurred image -->
+        <div class="home-main-background-image"></div>
+        <!-- Create navigation bar -->
+        <div class="navbar">
+          <img class="navbar-logo-image "src="public/images/logo.png">
+          <div class="navbar-element"><a href="index.html">Home</a></div>
+          <div class="navbar-element navbar-dropdown-section"><a href="#">About</a></div>
+          <div class="navbar-element navbar-dropdown-section"><a href="#">Outreach</a></div>
+          <div class="navbar-element navbar-dropdown-section"><a href="#">Media</a></div>
+          <div class="navbar-element navbar-dropdown-section"><a href="#">Sponsors</a></div>
+          <div class="navbar-element navbar-dropdown-section"><a href="#">Resources</a></div>
+        </div>
+
+        <!-- Content that is in the home page, when user first loads screen -->
+        <div id="home-main-title">Falcotronix</div>
+        <p id="home-main-subtitle">Team 7052 is a competitive robotics team from St. Ignatius High School and provides opportunities for all students to experience real world engineering through robotics.</p>
+        <p id="home-main-location">Located in Thunder Bay, Ontario</p>
       </div>
 
-      <!-- Content that is in the home page, when user first loads screen -->
-      <div class="home-main-title">Falcotronix</div>
-      <p class="home-main-subtitle">Team 7052 is a competitive robotics team from St. Ignatius High School and provides opportunities for all students to experience real world engineering through robotics.</p>
-      <p class="home-main-location">Located in Thunder Bay, Ontario</p>
-    </div>
+      <!-- About page screen -->
+      <div id="home-about-section">
+        <h1>About Us</h1>
+        <p>Falcotronix is a high school robotics team from St. Ignatius. We are part of FIRST Robotics, a world-wide high school robotics competition. Our mission is to promote STEM (Science, Technology, Engineering and Math) education in a team environment across Northwestern Ontario.</p>
+        <a class="underlined-link" href="#">Read More</a>
+        <div id="home-about-image"></div>
+      </div>
 
-    <!-- About page screen -->
-    <div class="home-about-section">
-      <h1>About Us</h1>
-      <p>Falcotronix is a high school robotics team from St. Ignatius. We are part of FIRST Robotics, a world-wide high school robotics competition. Our mission is to promote STEM (Science, Technology, Engineering and Math) education in a team environment across Northwestern Ontario.</p>
-      <a class="underlined-link" href="#">Read More</a>
-      <div class="home-about-image"></div>
-    </div>
+      <!-- Outreach page screen -->
+      <div id="home-outreach-section">
+        <h1>Outreach</h1>
+        <p>We are always looking to impact as many people in STEM education as possible. Yearly, we go onto countless community outreach events. This summer, we are running the first ever Falcotronix Summer Camp where students from grades 5 - 8 will learn how to build small robots from scratch.</p>
+        <a class="underlined-link" href="#">Read More</a>
+        <div id="home-outreach-image"></div>
+      </div>
 
-    <div class="home-outreach-section">
-      <h1>Outreach</h1>
+      <div id="home-media-section">
+        <h1>Media</h1>
+      </div>
+
     </div>
   </body>
 </html>
