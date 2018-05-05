@@ -1,6 +1,6 @@
-.aboutbar {
+.sub-navbar {
   /* Set all text colour to black, align to center, and light font */
-  color: Black;
+  color: black;
   background-color: white;
   text-align: center;
   font-weight: 300;
@@ -9,31 +9,31 @@
   /* Flex display in a row - span whole width */
   display: flex;
   flex-direction: row;
-  align-items: flex-end;
-  align-content: flex-end;
+  align-items: center;
+  justify-content: center;
 
-  /* Set navbar height to 100px and 1oovw width and center */
-  height: 100px;
-  width: 100vw;
-
-  /* Position navbar on the page */
+  /* Set position of subnavbar */
   position: absolute;
-  top: 350px;
-  left: 40%;
-  transform: translate(-40%, 0);
+  top: 55vh;
+  left: 0;
+  height: 25vh;
+  width: 100vw;
 }
 
-.aboutbar-element {
+.sub-navbar-element {
   /* Same spacing for all nav elements */
   flex-grow: 1;
-  /* Take away margin */
-  margin: 30px;
+  transition: all 0.5s ease;
 }
 
 
-.aboutbar-element>a {
+.sub-navbar-element>a {
   /* Get rid of default underline */
   text-decoration: none;
   /* Inherit color fron navbar element */
   color: inherit;
+}
+
+.sub-navbar-element:hover {
+  color: rgb(191,191,191);
 }

@@ -32,7 +32,7 @@ body {
   display: block;
   position: relative;
   overflow: hidden;
-  height: 47.2vh;
+  height: 80vh;
 }
 
 .about-background-image {
@@ -50,7 +50,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  height: 100%;
+  height: 55vh;
   width: 100%;
 
   /* Apply a blur to the image */
@@ -64,30 +64,6 @@ body {
   height: 125vh;
 }
 
-#about-main-title {
-  /* Set white font color, big text size, and semibolded weight  */
-  color: white;
-  font-size: 11vw; /* 8% of the width of the screen */
-  font-weight: 600; /* Semi-bold */
-
-  /* Set position to be in the center and 24% from the top */
-  position: absolute;
-  left: 24%;
-  top: 45%;
-  transform: translate(-50%, -30%);
-}
-#about-main-subtitle {
-  /* Set white font color, regular sized text, and light font weight */
-  color: white;
-  font-size: 40px;
-  font-weight: 350;
-
-  /* Set position to be in the center and 50% from the top */
-  position: absolute;
-  left: 50%;
-  top: 42%;
-  transform: translate(-50%, -18px);
-}
 #about-paragraph-section {
   display: grid;
   grid-template-columns: 0.8fr 1fr;
