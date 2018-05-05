@@ -1,0 +1,90 @@
+html {
+  /* Set global font family */
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+body {
+  /* Get rid of auto browser margin and padding */
+  margin: 0;
+  padding: 0;
+  /* Overflow hidden constrains all elements to be inside of the window */
+  overflow-x: hidden;
+}
+.about-page {
+  display: grid;
+  grid-template-columns: 100vw;
+  grid-auto-rows: auto;
+  grid-auto-flow: row;
+}
+
+.about-page p {
+  font-weight: 300;
+  font-size: calc(12px + 1vw);
+  line-height: 2.5;
+}
+
+.about-page h1 {
+  font-weight: 600;
+  font-size: 5vw;
+  margin-top: 10vh;
+}
+.about-main-container {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.about-background-image {
+  /* Set the background image with a 40% opacity gray overlay */
+  /* Change the gray value and opacity depending on background image and visibilty of text */
+  background-image: linear-gradient(rgba(152,152,152, 0.25), rgba(152,152,152, 0.25)), url("public/images/team-image.jpg");
+  /* Only 1 copy of the background is used (don't tile) */
+  background-repeat: no-repeat;
+  /* Cover whole entire div */
+  background-size: cover;
+  /* Center the image in the div */
+  background-position: center;
+
+  /* Position the div to fit the whole screen */
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+
+  /* Apply a blur to the image */
+  /* Can change blur amount when working with different images */
+  filter: blur(5px);
+  transform: scale(1.1);
+}
+
+#about-main-title {
+  /* Set white font color, big text size, and semibolded weight  */
+  color: white;
+  font-size: 8vw; /* 8% of the width of the screen */
+  font-weight: 600; /* Semi-bold */
+
+  /* Set position to be in the center and 25% from the top */
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  transform: translate(-50%, -30%);
+}
+#about-main-subtitle {
+  /* Set white font color, regular sized text, and light font weight */
+  color: white;
+  font-size: 20px;
+  font-weight: 300;
+
+  /* Align text center*/
+  text-align: center;
+  line-height: 2;
+  width: 60%;
+
+  /* Set position to be in the center and 50% from the top */
+  position: absolute;
+  left: 50%;
+  top: 55%;
+  transform: translate(-50%, -18px);
+}
