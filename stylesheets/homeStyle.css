@@ -40,7 +40,7 @@ body {
 .home-main-background-image {
   /* Set the background image with a 40% opacity gray overlay */
   /* Change the gray value and opacity depending on background image and visibilty of text */
-  background-image: linear-gradient(rgba(152,152,152, 0.25), rgba(152,152,152, 0.25)), url("public/images/main-image.jpg");
+  background-image: linear-gradient(rgba(152,152,152, 0.25), rgba(152,152,152, 0.25)), url("../public/images/main-image.jpg");
   /* Only 1 copy of the background is used (don't tile) */
   background-repeat: no-repeat;
   /* Cover whole entire div */
@@ -142,7 +142,7 @@ body {
 
 #home-about-section>#home-about-image {
   grid-area: image;
-  background: linear-gradient(rgba(154,154,154,0.25), rgba(154,154,154,0.25)), url("public/images/main-image.jpg");
+  background: linear-gradient(rgba(154,154,154,0.25), rgba(154,154,154,0.25)), url("../public/images/main-image.jpg");
   background-position: left;
   background-size: cover;
   width: 75%;
@@ -181,7 +181,7 @@ body {
 }
 #home-outreach-section>#home-outreach-image {
   grid-area: image;
-  background: linear-gradient(rgba(154,154,154,0.25), rgba(154,154,154,0.25)), url("public/images/main-image.jpg");
+  background: linear-gradient(rgba(154,154,154,0.25), rgba(154,154,154,0.25)), url("../public/images/main-image.jpg");
   background-position: left;
   background-size: cover;
   width: 75%;
@@ -203,7 +203,7 @@ body {
 #home-media-background-image {
   /* Set the background image with a 40% opacity gray overlay */
   /* Change the gray value and opacity depending on background image and visibilty of text */
-  background-image: linear-gradient(rgba(152,152,152, 0.25), rgba(152,152,152, 0.25)), url("public/images/main-image.jpg");
+  background-image: linear-gradient(rgba(152,152,152, 0.25), rgba(152,152,152, 0.25)), url("../public/images/main-image.jpg");
   /* Only 1 copy of the background is used (don't tile) */
   background-repeat: no-repeat;
   /* Cover whole entire div */
