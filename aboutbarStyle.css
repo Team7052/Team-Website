@@ -12,11 +12,11 @@
   align-items: flex-end;
   align-content: flex-end;
 
-  /* Set navbar height to 75px and 80% width and center */
+  /* Set navbar height to 100px and 1oovw width and center */
   height: 100px;
   width: 100vw;
 
-  /* Position navbar to the center */
+  /* Position navbar on the page */
   position: absolute;
   top: 350px;
   left: 40%;
@@ -26,8 +26,8 @@
 .aboutbar-element {
   /* Same spacing for all nav elements */
   flex-grow: 1;
-  /* Give all nav elements a margin */
-  margin: 0px;
+  /* Take away margin */
+  margin: 30px;
 }
 
 
