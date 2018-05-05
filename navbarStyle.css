@@ -27,6 +27,11 @@
   flex-grow: 1;
   /* Give all nav elements a margin */
   margin: 5px;
+  transition: color 0.5s ease;
+}
+
+.navbar-element:hover{
+  color: rgb(191,191,191);
 }
 
 

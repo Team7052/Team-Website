@@ -228,7 +228,6 @@ body {
   grid-template-areas:
     "title facebook insta youtube gallery"
     "title facebook insta youtube news";
-  flex-direction: row;
   align-items: center;
   justify-items: center;
   position: absolute;
@@ -242,7 +241,7 @@ body {
   color: white;
   grid-area: title;
   justify-self: start;
-  margin-top: auto;
+  margin: inherit;
 }
 
 #home-media-row img {
@@ -281,4 +280,27 @@ body {
 .custom-underlined-link:hover {
   color: black;
   border-bottom: 2px solid rgba(0,0,0,0.4);
+}
+
+#home-sponsors-section {
+  margin-bottom: 5vh;
+}
+
+#home-sponsors-section>.underlined-link {
+  float: right;
+  margin-right: 5vw;
+}
+#home-sponsors-section>h1 {
+  margin: 0 auto;
+  text-align: center;
+}
+#home-sponsors-section>#home-sponsor-images-container {
+  margin-top: 5vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+#home-sponsors-section img {
+  width: 40%;
+  height: 40%;
 }
