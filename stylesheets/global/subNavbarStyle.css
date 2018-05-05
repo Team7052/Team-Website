@@ -26,6 +26,10 @@
   transition: all 0.5s ease;
 }
 
+.sub-navbar-element-selected {
+  color: rgb(191,191,191);
+}
+
 
 .sub-navbar-element>a {
   /* Get rid of default underline */
@@ -35,5 +39,9 @@
 }
 
 .sub-navbar-element:hover {
+  color: rgb(191,191,191);
+}
+
+.sub-navbar-element-selected:hover {
   color: rgb(191,191,191);
 }

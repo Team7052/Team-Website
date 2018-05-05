@@ -1,16 +1,3 @@
-html {
-  /* Set global font family */
-  font-family: "Source Sans Pro", sans-serif;
-}
-
-body {
-  /* Get rid of auto browser margin and padding */
-  margin: 0;
-  padding: 0;
-  /* Overflow hidden constrains all elements to be inside of the window */
-  overflow-x: hidden;
-}
-
 .home-page {
   display: grid;
   grid-template-columns: 100vw;
