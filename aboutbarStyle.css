@@ -1,0 +1,39 @@
+.aboutbar {
+  /* Set all text colour to black, align to center, and light font */
+  color: Black;
+  background-color: white;
+  text-align: center;
+  font-weight: 300;
+  font-size: 30px;
+
+  /* Flex display in a row - span whole width */
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  align-content: flex-end;
+
+  /* Set navbar height to 75px and 80% width and center */
+  height: 100px;
+  width: 100vw;
+
+  /* Position navbar to the center */
+  position: absolute;
+  top: 350px;
+  left: 40%;
+  transform: translate(-40%, 0);
+}
+
+.aboutbar-element {
+  /* Same spacing for all nav elements */
+  flex-grow: 1;
+  /* Give all nav elements a margin */
+  margin: 0px;
+}
+
+
+.aboutbar-element>a {
+  /* Get rid of default underline */
+  text-decoration: none;
+  /* Inherit color fron navbar element */
+  color: inherit;
+}

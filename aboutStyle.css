@@ -62,29 +62,24 @@ body {
 #about-main-title {
   /* Set white font color, big text size, and semibolded weight  */
   color: white;
-  font-size: 8vw; /* 8% of the width of the screen */
+  font-size: 11vw; /* 8% of the width of the screen */
   font-weight: 600; /* Semi-bold */
 
   /* Set position to be in the center and 25% from the top */
   position: absolute;
-  left: 50%;
-  top: 30%;
+  left: 26%;
+  top: 21%;
   transform: translate(-50%, -30%);
 }
 #about-main-subtitle {
   /* Set white font color, regular sized text, and light font weight */
   color: white;
-  font-size: 20px;
-  font-weight: 300;
-
-  /* Align text center*/
-  text-align: center;
-  line-height: 2;
-  width: 60%;
+  font-size: 40px;
+  font-weight: 350;
 
   /* Set position to be in the center and 50% from the top */
   position: absolute;
   left: 50%;
-  top: 55%;
+  top: 19%;
   transform: translate(-50%, -18px);
 }
