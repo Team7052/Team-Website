@@ -1,3 +1,3 @@
 <div>
-  Social
+  Mentors
 </div>

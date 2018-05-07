@@ -23,10 +23,10 @@
         <?php
           foreach($sectionSubsections as $subSection) {
             if (strcmp(strtolower($subSection), $currentSubSection) == 0) {
-              echo "<div class='sub-navbar-element sub-navbar-element-selected' onclick='switchSubSection(this, $currentTitle)'>$subSection</div>";
+              echo "<div class='sub-navbar-element sub-navbar-element-selected' onclick='switchSubSection(this, \"$currentTitle\")'>$subSection</div>";
             }
             else {
-              echo "<div class='sub-navbar-element' onclick='switchSubSection(this, $currentTitle)'>$subSection</div>";
+              echo "<div class='sub-navbar-element' onclick='switchSubSection(this, \"$currentTitle\")'>$subSection</div>";
             }
           }
          ?>
