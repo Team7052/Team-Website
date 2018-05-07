@@ -18,11 +18,11 @@
         <div class="navbar">
           <img class="navbar-logo-image "src="public/images/logo.png">
           <div class="navbar-element"><a href="index.html">Home</a></div>
-          <div class="navbar-element navbar-dropdown-section" onclick="switchTabs(this)">About</div>
-          <div class="navbar-element navbar-dropdown-section"><a href="<?php echo $_SERVER['DOCUMENT_ROOT']?>/outreach/events.html">Outreach</a></div>
-          <div class="navbar-element navbar-dropdown-section"><a href="<?php echo $_SERVER['DOCUMENT_ROOT']?>/media/gallery.html">Media</a></div>
-          <div class="navbar-element navbar-dropdown-section"><a href="<?php echo $_SERVER['DOCUMENT_ROOT']?>/sponsors/all.html">Sponsors</a></div>
-          <div class="navbar-element navbar-dropdown-section"><a href="<?php echo $_SERVER['DOCUMENT_ROOT']?>/resources/blog.html">Resources</a></div>
+          <div class="navbar-element navbar-dropdown-section"><a href="about/about.php">About</a></div>
+          <div class="navbar-element navbar-dropdown-section"><a href="outreach/events.html">Outreach</a></div>
+          <div class="navbar-element navbar-dropdown-section"><a href="media/media.php">Media</a></div>
+          <div class="navbar-element navbar-dropdown-section"><a href="sponsors/all.html">Sponsors</a></div>
+          <div class="navbar-element navbar-dropdown-section"><a href="resources/blog.html">Resources</a></div>
         </div>
 
         <!-- Content that is in the home page, when user first loads screen -->
@@ -51,9 +51,9 @@
         <div id="home-media-background-image"></div>
         <div id="home-media-row">
           <h1>Media</h1>
-          <img id="facebookLogo" src="<?php echo $_SERVER['DOCUMENT_ROOT']?>/public/images/socialMediaLogos/facebook.png">
-          <img id="instagramLogo" src="<?php echo $_SERVER['DOCUMENT_ROOT']?>/public/images/socialMediaLogos/instagram.png">
-          <img id="youtubeLogo" src="<?php echo $_SERVER['DOCUMENT_ROOT']?>/public/images/socialMediaLogos/youtube.png">
+          <img id="facebookLogo" src="public/images/socialMediaLogos/facebook.png">
+          <img id="instagramLogo" src="public/images/socialMediaLogos/instagram.png">
+          <img id="youtubeLogo" src="public/images/socialMediaLogos/youtube.png">
           <a id="galleryLink" href="" class="custom-underlined-link">Gallery</a>
           <a id="newsLink" href="" class="custom-underlined-link">News</a>
         </div>
@@ -62,15 +62,15 @@
       <div class="home-subsection" id="home-sponsors-section">
         <h1>Sponsors</h1>
         <div id="home-sponsor-images-container">
-          <img class="home-sponsor-image" id="home-sponsor-image1" src="<?php echo $_SERVER['DOCUMENT_ROOT']?>/public/images/lakehead.png">
-          <img class="home-sponsor-image" id="home-sponsor-image2" src="<?php echo $_SERVER['DOCUMENT_ROOT']?>/public/images/concollege.png">
+          <img class="home-sponsor-image" id="home-sponsor-image1" src="public/images/lakehead.png">
+          <img class="home-sponsor-image" id="home-sponsor-image2" src="public/images/concollege.png">
         </div>
-        <a href="#" class="underlined-link">See all; ?></a>
+        <a href="#" class="underlined-link">See all</a>
       </div>
     </div>
   </body>
   <?php
-  include($_SERVER["DOCUMENT_ROOT"] . "/templateFiles/footer.html");
+  include("templateFiles/footer.html");
   ?>
   <script type="text/javascript" src="mainjs.php"></script>
 </html>

@@ -3,27 +3,35 @@
     <!-- Create background blurred image -->
     <div class="page-background-image" id="outreach-background-image"></div>
     <div class="navbar">
-      <img class="navbar-logo-image "src="<?php echo $_SERVER['DOCUMENT_ROOT']?>/public/images/logo.png">
-      <div class="navbar-element"><a href="<?php echo $_SERVER['DOCUMENT_ROOT']?>/index.html">Home</a></div>
-      <div class="navbar-element navbar-dropdown-section"><a href="<?php echo $_SERVER['DOCUMENT_ROOT']?>/about/theTeam.html">About</a></div>
-      <div class="navbar-element navbar-dropdown-section"><a href="<?php echo $_SERVER['DOCUMENT_ROOT']?>/outreach/events.html">Outreach</a></div>
-      <div class="navbar-element navbar-dropdown-section"><a href="<?php echo $_SERVER['DOCUMENT_ROOT']?>/media/gallery.html">Media</a></div>
-      <div class="navbar-element navbar-dropdown-section"><a href="<?php echo $_SERVER['DOCUMENT_ROOT']?>/sponsors/all.html">Sponsors</a></div>
-      <div class="navbar-element navbar-dropdown-section"><a href="<?php echo $_SERVER['DOCUMENT_ROOT']?>/resources/blog.html">Resources</a></div>
+      <img class="navbar-logo-image "src="../public/images/logo.png">
+      <div class="navbar-element"><a href="../index.php">Home</a></div>
+      <div class="navbar-element navbar-dropdown-section"><a href="../about/about.php">About</a></div>
+      <div class="navbar-element navbar-dropdown-section"><a href="../outreach/outreach.php">Outreach</a></div>
+      <div class="navbar-element navbar-dropdown-section"><a href="../media/media.php">Media</a></div>
+      <div class="navbar-element navbar-dropdown-section"><a href="../sponsors/sponsors.php">Sponsors</a></div>
+      <div class="navbar-element navbar-dropdown-section"><a href="../resources/resources.php">Resources</a></div>
     </div>
     <!-- Content that is in the about page, when user first loads screen -->
     <!-- Next two are global elements since they are used on every page -->
     <div class="page-title-section">
-      <div class="page-main-title"><?php echo $_GET['title']; ?></div>
-      <p class="page-main-subtitle">gallery</p>
+      <div class="page-main-title"><?php echo $currentTitle; ?></div>
+      <p class="page-main-subtitle"><?php echo $currentSubSection; ?></p>
     </div>
     <!-- Renamed to sub-navbar since this will be a global element (used in every page) -->
     <div class="sub-navbar">
-      <div class="sub-navbar-element sub-navbar-element-selected"><a href="gallery.html">Gallery</a></div>
-      <div class="sub-navbar-element"><a href="news.html">News</a></div>
-      <div class="sub-navbar-element"><a href="social.html">Social</a></div>
+      <?php
+        foreach($sectionSubsections as $subSection) {
+          if (strcmp(strtolower($subSection), $currentSubSection) == 0) {
+            echo "<div class='sub-navbar-element sub-navbar-element-selected'><a href='$subSection.php'>$subSection</a></div>";
+          }
+          else {
+            echo "<div class='sub-navbar-element'><a href='$subSection.php'>$subSection</a></div>";
+          }
+        }
+       ?>
     </div>
   </div>
   <div class="page-subsection">
 
   </div>
+</div>
