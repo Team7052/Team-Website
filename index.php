@@ -19,10 +19,10 @@
           <img class="navbar-logo-image "src="public/images/logo.png">
           <div class="navbar-element"><a href="index.html">Home</a></div>
           <div class="navbar-element navbar-dropdown-section"><a href="about/about.php">About</a></div>
-          <div class="navbar-element navbar-dropdown-section"><a href="outreach/events.html">Outreach</a></div>
+          <div class="navbar-element navbar-dropdown-section"><a href="outreach/outreach.php">Outreach</a></div>
           <div class="navbar-element navbar-dropdown-section"><a href="media/media.php">Media</a></div>
-          <div class="navbar-element navbar-dropdown-section"><a href="sponsors/all.html">Sponsors</a></div>
-          <div class="navbar-element navbar-dropdown-section"><a href="resources/blog.html">Resources</a></div>
+          <div class="navbar-element navbar-dropdown-section"><a href="sponsors/sponsors.php">Sponsors</a></div>
+          <div class="navbar-element navbar-dropdown-section"><a href="resources/resources.php">Resources</a></div>
         </div>
 
         <!-- Content that is in the home page, when user first loads screen -->

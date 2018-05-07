@@ -6,10 +6,8 @@
     $sectionSubsections = array("Platinum", "Gold", "Silver", "Bronze");
     include("../templateFiles/header.php");
   ?>
-  <body>
-    <?php
-      include("../templateFiles/template-page.php");
-     ?>
-  </body>
+  <?php include("../templateFiles/start-template-page.php"); ?>
 
+
+  <?php include("../templateFiles/end-template-page.php") ?>
 </html>

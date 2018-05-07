@@ -24,6 +24,7 @@
   /* Same spacing for all nav elements */
   flex-grow: 1;
   transition: all 0.5s ease;
+  cursor: pointer;
 }
 
 .sub-navbar-element-selected {
