@@ -2,7 +2,7 @@
 <!DOCTYPE HTML>
 <html>
   <?php
-    include("../functions.php");
+    include("../phpScripts/functions.php");
     $_SESSION['currentTitle'] = "Resources";
     $_SESSION['sectionSubsections'] = array("Blog", "For Rookies");
     if (!stringIsInArray($_SESSION['currentSubsection'], $_SESSION['sectionSubsections'])) {

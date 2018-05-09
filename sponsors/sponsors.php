@@ -1,8 +1,10 @@
+<?php session_start(); ?>
+
 <!DOCTYPE HTML>
 <html>
   <?php
+    include("../phpScripts/functions.php");
     $_SESSION['currentTitle'] = "Sponsors";
-    $_SESSION['currentSubsection'] = "";
     $_SESSION['sectionSubsections'] = array("Platinum", "Gold", "Silver", "Bronze");
     if (!stringIsInArray($_SESSION['currentSubsection'], $_SESSION['sectionSubsections'])) {
       $_SESSION['currentSubsection'] = $_SESSION['sectionSubsections'][0];

@@ -48,20 +48,26 @@
   for (var i = 0; i < dropdownTitles.length; i++) {
     dropdownTitles[i].onmouseover = function(event) {
       console.log(event.srcElement.innerHTML);
-      <?php $_SESSION['hoverTitle'] = "Resources"; ?>
-      let hover = <?php echo "\"" . $_SESSION['hoverTitle'] ."\""; ?>;
-      console.log("hover: " + hover);
+      let xmlhttp = new XMLHttpRequest();
+      xmlhttp.onreadystatechange = function() {
+        console.log(this.responseText);
+      }
+      xmlhttp.open("GET", "../phpScripts/setHoverTitle.php?title=" + event.srcElement.innerHTML, true);
+      xmlhttp.send();
     }
   }
 
   var dropdownItems = document.getElementsByClassName('navbar-dropdown-element-list-item');
   for (var i = 0; i < dropdownItems.length; i++) {
-    dropdownItems[i].onclick = function() {
-      <?php
-        $_SESSION['currentSubsection'] = 'Blog';
-        $_SESSION['currentTitle'] = $_SESSION['hoverTitle'];
-        ?>
-        document.location.href = <?php echo "\"../" . $_SESSION['currentTitle'] . "/" . $_SESSION['currentTitle'] . ".php\""; ?>;
+    dropdownItems[i].onclick = function(event) {
+      let xmlhttp = new XMLHttpRequest();
+      xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          document.location.href = this.responseText;
+        }
+      }
+      xmlhttp.open("GET", "../phpScripts/switchPage.php?subSection=" + event.srcElement.innerHTML, true);
+      xmlhttp.send();
     }
   }
 </script>

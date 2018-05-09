@@ -1,6 +1,9 @@
+<?php session_start(); ?>
+
 <!DOCTYPE HTML>
 <html>
   <?php
+    include("../phpScripts/functions.php");
     $currentTitle = "Outreach";
     $_SESSION['sectionSubsections'] = array("Events", "Camps");
 

@@ -5,6 +5,6 @@
         return True;
       }
     }
-    return false;
+    return False;
   }
 ?>
