@@ -1,11 +1,11 @@
 <!DOCTYPE HTML>
 <html>
   <?php
-    $currentTitle = "Sponsors";
-    $currentSubSection = "";
-    $sectionSubsections = array("Platinum", "Gold", "Silver", "Bronze");
-    if (!stringIsInArray($currentSubsection, $sectionSubsections)) {
-      $currentSubsection = $sectionSubsections[0];
+    $_SESSION['currentTitle'] = "Sponsors";
+    $_SESSION['currentSubsection'] = "";
+    $_SESSION['sectionSubsections'] = array("Platinum", "Gold", "Silver", "Bronze");
+    if (!stringIsInArray($_SESSION['currentSubsection'], $_SESSION['sectionSubsections'])) {
+      $_SESSION['currentSubsection'] = $_SESSION['sectionSubsections'][0];
     }
     include("../templateFiles/header.php");
   ?>

@@ -1,10 +1,10 @@
 <!DOCTYPE HTML>
 <html>
   <?php
-    $currentTitle = "Media";
-    $sectionSubsections = array("Gallery", "News", "Social");
-    if (!stringIsInArray($currentSubsection, $sectionSubsections)) {
-      $currentSubsection = $sectionSubsections[0];
+    $_SESSION['currentTitle'] = "Media";
+    $_SESSION['sectionSubsections'] = array("Gallery", "News", "Social");
+    if (!stringIsInArray($_SESSION['currentSubsection'], $_SESSION['sectionSubsections'])) {
+      $_SESSION['currentSubsection'] = $_SESSION['sectionSubsections'][0];
     }
     include("../templateFiles/header.php");
   ?>

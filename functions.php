@@ -1,10 +1,10 @@
 <?php
   function stringIsInArray($string, $array) {
-    for ($array as $current) {
+    foreach ($array as $current) {
       if (strcmp($string, $current) == 0) {
         return True;
       }
     }
-    return False;
+    return false;
   }
 ?>

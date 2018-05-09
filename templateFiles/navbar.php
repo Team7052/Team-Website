@@ -48,8 +48,8 @@
   for (var i = 0; i < dropdownTitles.length; i++) {
     dropdownTitles[i].onmouseover = function(event) {
       console.log(event.srcElement.innerHTML);
-      <?php $hoverTitle = "Resources"; ?>
-      let hover = <?php echo "\"$hoverTitle\""; ?>;
+      <?php $_SESSION['hoverTitle'] = "Resources"; ?>
+      let hover = <?php echo "\"" . $_SESSION['hoverTitle'] ."\""; ?>;
       console.log("hover: " + hover);
     }
   }
@@ -58,10 +58,10 @@
   for (var i = 0; i < dropdownItems.length; i++) {
     dropdownItems[i].onclick = function() {
       <?php
-        $currentSubsection = 'Blog';
-        $currentTitle = $hoverTitle;
-        header("Location: ../$currentTitle/$currentTitle.php");
+        $_SESSION['currentSubsection'] = 'Blog';
+        $_SESSION['currentTitle'] = $_SESSION['hoverTitle'];
         ?>
+        document.location.href = <?php echo "\"../" . $_SESSION['currentTitle'] . "/" . $_SESSION['currentTitle'] . ".php\""; ?>;
     }
   }
 </script>

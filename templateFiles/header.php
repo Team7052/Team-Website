@@ -5,5 +5,5 @@
   <link href="../stylesheets/global/footerStyle.css" rel="stylesheet" type="text/css">
   <link href="../stylesheets/global/globalStyle.css" rel="stylesheet" type="text/css">
   <link href="../stylesheets/global/subNavbarStyle.css" rel="stylesheet" type="text/css">
-  <title><?php echo $currentTitle; ?> | Team 7052</title>
+  <title><?php session_start(); echo $_SESSION['currentTitle']; ?> | Team 7052</title>
 </head>

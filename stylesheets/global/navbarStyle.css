@@ -66,15 +66,12 @@
 }
 
 .navbar-element:hover {
-  background-color: rgba(255,255,255,0.4);
+  background-color: rgba(255,255,255,0.6);
 }
 
-.navbar-element:hover>.dropdown-title {
-  color: rgb(191,191,191);
-}
 .navbar-element:hover>.navbar-dropdown-element-list {
   display: block;
-  background-color: rgba(255,255,255,0.2);
+  background-color: rgba(255,255,255,0.4);
   opacity: 1;
   visibility: visible;
 }
