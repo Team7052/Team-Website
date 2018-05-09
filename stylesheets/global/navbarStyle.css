@@ -3,7 +3,7 @@
   color: white;
   text-align: center;
   font-weight: 300;
-  font-size: 24px;
+  font-size: calc(12px + 1vw);
 
   /* Flex display in a row - span whole width */
   display: flex;
@@ -19,34 +19,92 @@
   position: absolute;
   top: 10px;
   left: 50%;
+  overflow: visible;
   transform: translate(-50%, 0);
 }
-
-.navbar-element {
-  /* Same spacing for all nav elements */
-  flex-grow: 1;
-  /* Give all nav elements a margin */
-  margin: 5px;
-  transition: color 0.5s ease;
-  cursor: pointer;
-}
-
-.navbar-element:hover{
-  color: rgb(191,191,191);
-}
-
-
-.navbar-element>a {
-  /* Get rid of default underline */
-  text-decoration: none;
-  /* Inherit color fron navbar element */
-  color: inherit;
-}
-
 
 .navbar-logo-image {
   /* Logo is the same height as navbar */
   height: inherit;
   /* Padding to right to offset the rest of the nav elements */
   margin-right: 80px;
+}
+/* Navbar element with no dropdown*/
+.navbar-element-no-dropdown {
+  /* Same spacing for all nav elements */
+  flex-grow: 1;
+  /* Give all nav elements a margin */
+  margin: 5px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  position: relative;
+}
+.navbar-element-no-dropdown>a {
+  /* Get rid of default underline */
+  text-decoration: none;
+  /* Inherit color fron navbar element */
+  color: inherit;
+  transition: color 0.5s ease;
+}
+.navbar-element-no-dropdown:hover>a {
+  color: rgb(191,191,191);
+}
+
+/* Nav bar element with dropdown */
+.navbar-element {
+  /* Same spacing for all nav elements */
+  flex-grow: 1;
+  /* Give all nav elements a margin */
+  margin: 5px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  position: relative;
+}
+
+.navbar-element-current {
+  color: black;
+}
+
+.navbar-element:hover {
+  background-color: rgba(255,255,255,0.4);
+}
+
+.navbar-element:hover>.dropdown-title {
+  color: rgb(191,191,191);
+}
+.navbar-element:hover>.navbar-dropdown-element-list {
+  display: block;
+  background-color: rgba(255,255,255,0.2);
+  opacity: 1;
+  visibility: visible;
+}
+
+
+.navbar-element>.dropdown-title {
+  /* Get rid of default underline */
+  text-decoration: none;
+  /* Inherit color fron navbar element */
+  color: inherit;
+  transition: color 0.5s ease;
+}
+
+.navbar-dropdown-element-list {
+  background-color: rgba(0,0,0,0);
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  transition: all 0.5s ease;
+
+  list-style-type: none;
+  margin-top: 0;
+  text-align: center;
+  padding-left: inherit;
+  width: calc(100%);
+}
+
+.navbar-dropdown-element-list-item {
+  transition: all 0.5s ease;
+}
+.navbar-dropdown-element-list-item:hover {
+  color: rgba(80,80,80, 1.0);
 }

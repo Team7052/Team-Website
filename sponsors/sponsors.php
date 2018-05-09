@@ -4,6 +4,9 @@
     $currentTitle = "Sponsors";
     $currentSubSection = "";
     $sectionSubsections = array("Platinum", "Gold", "Silver", "Bronze");
+    if (!stringIsInArray($currentSubsection, $sectionSubsections)) {
+      $currentSubsection = $sectionSubsections[0];
+    }
     include("../templateFiles/header.php");
   ?>
   <?php include("../templateFiles/start-template-page.php"); ?>

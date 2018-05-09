@@ -15,15 +15,7 @@
         <!-- Create main background blurred image -->
         <div class="home-main-background-image"></div>
         <!-- Create navigation bar -->
-        <div class="navbar">
-          <img class="navbar-logo-image "src="public/images/logo.png">
-          <div class="navbar-element"><a href="index.html">Home</a></div>
-          <div class="navbar-element navbar-dropdown-section"><a href="about/about.php">About</a></div>
-          <div class="navbar-element navbar-dropdown-section"><a href="outreach/outreach.php">Outreach</a></div>
-          <div class="navbar-element navbar-dropdown-section"><a href="media/media.php">Media</a></div>
-          <div class="navbar-element navbar-dropdown-section"><a href="sponsors/sponsors.php">Sponsors</a></div>
-          <div class="navbar-element navbar-dropdown-section"><a href="resources/resources.php">Resources</a></div>
-        </div>
+        <?php include("templateFiles/navbar.php"); ?>
 
         <!-- Content that is in the home page, when user first loads screen -->
         <div id="home-main-title">Falcotronix</div>
@@ -72,5 +64,4 @@
   <?php
   include("templateFiles/footer.html");
   ?>
-  <script type="text/javascript" src="mainjs.php"></script>
 </html>

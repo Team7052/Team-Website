@@ -3,15 +3,18 @@
     <div class="page-main-container">
       <!-- Create background blurred image -->
       <div class="page-background-image" id="outreach-background-image"></div>
-      <div class="navbar">
-        <img class="navbar-logo-image "src="../public/images/logo.png">
-        <div class="navbar-element"><a href="../index.php">Home</a></div>
-        <div class="navbar-element navbar-dropdown-section"><a href="../about/about.php">About</a></div>
-        <div class="navbar-element navbar-dropdown-section"><a href="../outreach/outreach.php">Outreach</a></div>
-        <div class="navbar-element navbar-dropdown-section"><a href="../media/media.php">Media</a></div>
-        <div class="navbar-element navbar-dropdown-section"><a href="../sponsors/sponsors.php">Sponsors</a></div>
-        <div class="navbar-element navbar-dropdown-section"><a href="../resources/resources.php">Resources</a></div>
-      </div>
+      <?php include("navbar.php"); ?>
+      <script type="text/javascript">
+        // set current nav section color (but skip for now until full dropdown menu is created)
+        /*var navBarElements = document.getElementsByClassName('navbar-element');
+        console.log(navBarElements);
+        for (i = 0; i < navBarElements.length; i++) {
+          if (navBarElements[i].innerHTML == "<?php echo $currentTitle; ?>") {
+            navBarElements[i].className = "navbar-element navbar-element-current navbar-dropdown-section";
+          }
+          navBarElements[i].className = "navbar-element navbar-dropdown-section";
+        }*/
+      </script>
       <!-- Content that is in the about page, when user first loads screen -->
       <!-- Next two are global elements since they are used on every page -->
       <div class="page-title-section">
