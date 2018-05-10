@@ -1,3 +1,5 @@
+<link type="text/css" href="../stylesheets/about/aboutTheTeamStyle.css">
+
 <div id="about-team-paragraph-section">
   <p>
     quisquam est, qui dolorem ipsum quia

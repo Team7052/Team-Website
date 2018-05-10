@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 </div>
 </div>
 </body>
@@ -23,7 +24,16 @@
         currentPageSubsection.innerHTML = this.responseText;
       }
     }
+    // set the currentSubsection
     xmlRequest.open("GET", "../" + currentSection + "/" + element.innerHTML + ".php");
     xmlRequest.send();
+
+    let setSubsectionRequest = new XMLHttpRequest();
+    setSubsectionRequest.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) { }
+    }
+    // set the currentSubsection
+    setSubsectionRequest.open("GET", "../phpScripts/setCurrentSubsection.php?section=" + element.innerHTML);
+    setSubsectionRequest.send();
   }
 </script>

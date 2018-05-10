@@ -1,0 +1,7 @@
+#about-members-section {
+  display: grid;
+  width: 90vw;
+  margin: 5vw;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-auto-rows: 30vw;
+}

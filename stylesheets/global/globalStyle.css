@@ -62,7 +62,6 @@ body {
 
 .page-subsection {
   background-color: rgb(235,235,235);
-  height: 125vh;
 }
 .page {
   display: grid;
