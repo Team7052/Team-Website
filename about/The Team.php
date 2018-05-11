@@ -1,4 +1,4 @@
-<link type="text/css" href="../stylesheets/about/aboutTheTeamStyle.css">
+<link type="text/css" rel="stylesheet" href="../stylesheets/about/aboutTheTeamStyle.css">
 
 <div id="about-team-paragraph-section">
   <p>
