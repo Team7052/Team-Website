@@ -1,30 +1,8 @@
 <link type="text/css" rel="stylesheet" href="../stylesheets/about/aboutMembers.css">
 
-  <div id="about-members-section">
-  </div>
+<div id="about-members-section">
+</div>
 
-<script type="text/javascript">
-    var aboutMembersSection = document.getElementById("about-members-section");
-    loadMembers();
-    function loadMembers() {
-      // fetch json
-      //let members = loadJSON("jsonFiles/members.json");
-      //console.log(members);
-
-      let name = "Kevin Bai";
-      let role = "Team Director";
-      let grade = 11;
-      let email = "kevin.bai@tbcschools.ca"
-      let description = "Blah blah bla has;d lkfj a;s lkdfj ;alskjd f;lasjd ;lasjd f;a lksdj f;la sdfkldf kls;j als;d a;slkdj fa;lsdj f;laskj dfl;a ksjdfk; jas;df jdfks";
-      let src = "../public/images/memberImages/Kevin Bai.jpg";
-      let request = new XMLHttpRequest();
-      request.onreadystatechange = function() {
-          if (this.readyState == 4 && this.status == 200) {
-              aboutMembersSection.innerHTML = this.responseText;
-          }
-      }
-      request.open("POST", "member-template.php", true);
-      request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-      request.send("name=" + name + "&role=" + role + "&grade=" + grade + "&email=" + email + "&description=" + description + "&imgSrc=" + src);
-    }
-  </script>
+<script type="text/javascript" src="../scripts/main.js"></script>
+<script type="text/javascript" src="membersScript.js"></script>
+<script type="text/javascript">loadMembers();</script>
