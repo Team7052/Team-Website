@@ -22,6 +22,7 @@
     xmlRequest.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
         currentPageSubsection.innerHTML = this.responseText;
+        console.log(this.responseText);
       }
     }
     // set the currentSubsection

@@ -1,18 +1,6 @@
-<?php session_start(); ?>
-<!DOCTYPE HTML>
-<html>
-<head>
 <link type="text/css" rel="stylesheet" href="../stylesheets/about/aboutTheTeamStyle.css">
-<link href="stylesheets/global/footerStyle.css" rel="stylesheet" type="text/css">
-<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900" rel="stylesheet">
-<link href="stylesheets/homeStyle.css" rel="stylesheet" type="text/css">
-<link href="stylesheets/global/navbarStyle.css" rel="stylesheet" type="text/css">
-<link href="stylesheets/global/footerStyle.css" rel="stylesheet" type="text/css">
-<link href="stylesheets/global/globalStyle.css" rel="stylesheet" type="text/css">
-<title>About | Team 7052</title>
-</head>
 
-
+<!-- Header and footer not needed in this file -->
 <div id="about-team-paragraph-section">
   <div id="first-image"></div>
   <p>
@@ -25,11 +13,7 @@
  Our devoted and experienced mentors teach students new skills
  in leadership, marketing, engineering, communication, and critical
  thinking. As a newly formed team, we strive to continue to succeed
- FIRST Robotics evets and in time form a well established Robotics program
+ FIRST Robotics events and in time form a well established Robotics program
  in our school.
   </p>
 </div>
-<?php
-include("templateFiles/footer.html");
-?>
-</html>

@@ -9,12 +9,14 @@
   font-weight: 300;
   font-size: calc(12px + 1vw);
   line-height: 2.5;
+  color: #333333;
 }
 
 .home-page h1 {
   font-weight: 600;
   font-size: 5vw;
   margin-top: 10vh;
+  color:#333333;
 }
 
 .home-main-container {
@@ -252,7 +254,6 @@
 #home-media-row>#newsLink {
   grid-area: news;
   align-self: start;
-  margin: top: 15px;
 }
 .custom-underlined-link {
   color: white;

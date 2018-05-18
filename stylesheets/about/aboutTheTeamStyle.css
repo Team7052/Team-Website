@@ -14,8 +14,7 @@
 }
 #about-team-paragraph-section>#first-image {
   grid-area: link image;
-  <!-- Not sure why the picture isnt working -->
-  background: linear-gradient(rgba(154,154,154,0.25), rgba(154,154,154,0.25)), url("../public/images/team-image.jpg");
+  background: linear-gradient(rgba(154,154,154,0.25), rgba(154,154,154,0.25)), url("../../public/images/team-image.jpg");
   background-size: cover;
   width: 85%;
   height: 50%;
