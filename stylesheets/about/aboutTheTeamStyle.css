@@ -1,12 +1,28 @@
 #about-team-paragraph-section {
   display: grid;
-  grid-template-columns: 0.8fr 1fr;
+  grid-template-columns: 0.8fr 0.8fr;
   grid-template-rows: auto auto auto;
   grid-template-areas:
     "link image";
   margin-left: 5vw;
-  margin-top:25vw;
+  margin-top:0vw;
   justify-items: start;
   z-index: 2;
-  color: red;
+  height: 100vh;
+  margin-right: 5vw;
+
+}
+#about-team-paragraph-section>#first-image {
+  grid-area: link image;
+  <!-- Not sure why the picture isnt working -->
+  background: linear-gradient(rgba(154,154,154,0.25), rgba(154,154,154,0.25)), url("../public/images/team-image.jpg");
+  background-size: cover;
+  width: 85%;
+  height: 50%;
+  justify-self: start;
+  margin-right: 5vw;
+  margin-top: 10vw;
+  align-self: start;
+
+  box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.4), 0 12px 30px 0 rgba(0, 0, 0, 0.4);
 }
