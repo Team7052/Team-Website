@@ -10,18 +10,9 @@
     </ul>
   </div>
   <div class="navbar-element">
-    <div class="dropdown-title">Outreach</div>
-
-    <ul class="navbar-dropdown-element-list">
-     <li class="navbar-dropdown-element-list-item">Events</li>
-     <li class="navbar-dropdown-element-list-item">Camps</li>
-    </ul>
-  </div>
-  <div class="navbar-element">
     <div class="dropdown-title">Media</div>
     <ul class="navbar-dropdown-element-list">
      <li class="navbar-dropdown-element-list-item">Gallery</li>
-     <li class="navbar-dropdown-element-list-item">News</li>
      <li class="navbar-dropdown-element-list-item">Social</li>
     </ul>
   </div>
