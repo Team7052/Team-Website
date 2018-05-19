@@ -36,6 +36,7 @@ function loadYearlySequentialGalleryEvents(element, array, i, year, callback) {
     let length = array.length;
     if (i < length) {
         let title = array[i].title;
+        let date = array[i].date;
         let folderName = array[i].folderName;
         let eventRequest = new XMLHttpRequest();
         eventRequest.onreadystatechange = function() {
@@ -45,7 +46,7 @@ function loadYearlySequentialGalleryEvents(element, array, i, year, callback) {
                 loadYearlySequentialGalleryEvents(element, array, i + 1, year, callback);
             }
         }
-        eventRequest.open("GET", "galleryTemplate.php?title=" + title + "&year=" + year + "&folderName=" + folderName);
+        eventRequest.open("GET", "galleryTemplate.php?title=" + title + "&year=" + year + "&date=" + date + "&folderName=" + folderName);
         eventRequest.send();
     }
     else {
@@ -53,3 +54,43 @@ function loadYearlySequentialGalleryEvents(element, array, i, year, callback) {
     }
 }
 
+function showGalleryPage(title, date, year, folder) {
+    console.log(title + " " + date + " " + year + " " + folder);
+    //show modal view
+    let modalRequest = new XMLHttpRequest();
+    modalRequest.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            let modal = document.getElementById("gallery-modal");
+            let modalTitle = document.getElementById("gallery-modal-title");
+            let modalDate = document.getElementById("gallery-modal-date");
+            let modalImageContainer = document.getElementById("gallery-modal-images-container");
+
+            modalTitle.innerHTML = title;
+            modalDate.innerText = date;
+            let paths = this.responseText.split("\n");
+            //disregard last one since last one is always ""
+            modalImageContainer.innerHTML = "";
+            if (paths.length > 1) {
+                for (var i = 0; i < paths.length - 1; i++) {
+                    let aTag = document.createElement("a");
+                    aTag.href = paths[i];
+                    aTag.target = "_blank";
+                    let img = document.createElement("IMG");
+                    img.src = paths[i];
+                    img.className = "gallery-modal-image";
+                    aTag.appendChild(img);
+                    modalImageContainer.appendChild(aTag);
+                }
+            }
+            
+            modal.style="visibility:visible;opacity: 1;";
+        }
+    }
+    modalRequest.open("GET", "modalGallery.php?year=" + year + "&folderName=" + folder);
+    modalRequest.send();
+}
+
+function hideModal() {
+    let modal = document.getElementById("gallery-modal");
+    modal.style="visibility:hidden;opacity: 0;";
+}

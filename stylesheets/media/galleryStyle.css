@@ -86,3 +86,55 @@ div.gallery-item>div {
     padding-top: 2vw;
 }
 
+#gallery-modal {
+    visibility: hidden;
+    position: fixed;
+    opacity: 0;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+    z-index: 10;
+    transition: all 0.5s ease;
+    overflow: scroll;
+}
+#gallery-modal-exit {
+    color: white;
+    float: right;
+    margin-right: 5vw;
+    margin-top: 5vw;
+    font-size: 5vw;
+    transition: color 0.5s ease;
+    cursor: pointer;
+}
+#gallery-modal-exit:hover {
+    color: rgb(150,150,150);
+}
+
+#gallery-modal-title {
+    display: inline-block;
+    color: white;
+    margin-left: 5vw;
+    margin-top: 5vw;
+    font-size: 5vw;
+    font-weight: 200;
+}
+#gallery-modal-date {
+    color: white;
+    margin-left: 5vw;
+    font-size: 2vw;
+    font-weight: 800;
+}
+
+#gallery-modal-images-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-auto-rows: 15vw;
+    grid-gap: 2vw;
+    margin: 5vw;
+}
+
+.gallery-modal-image {
+    width: 100%;
+}

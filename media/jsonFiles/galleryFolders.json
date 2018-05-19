@@ -1,30 +1,11 @@
 {
     "gallery": [
         {
-            "year2019": [
-                {
-                    "title": "Oshawa Event",
-                    "date": "02/29/2018",
-                    "folderName": "OshawaEvent"
-                },
-                {
-                    "title": "North Bay Event",
-                    "date": "03/28/2018",
-                    "folderName": "NorthBayEvent"
-                },
-                {
-                    "title": "NWO Science Fair Outreach Event",
-                    "date": "04/27/2018",
-                    "folderName": "NWOScienceFair2018"
-                }
-            ]
-        },
-        {
             "year2018": [
                 {
-                    "title": "Oshawa Event",
-                    "date": "02/29/2018",
-                    "folderName": "OshawaEvent"
+                    "title": "NWO Science Fair Outreach Event",
+                    "date": "04/27/2018",
+                    "folderName": "NWOScienceFair2018"
                 },
                 {
                     "title": "North Bay Event",
@@ -32,9 +13,9 @@
                     "folderName": "NorthBayEvent"
                 },
                 {
-                    "title": "NWO Science Fair Outreach Event",
-                    "date": "04/27/2018",
-                    "folderName": "NWOScienceFair2018"
+                    "title": "Oshawa Event",
+                    "date": "02/29/2018",
+                    "folderName": "OshawaEvent"
                 }
             ]
         }
