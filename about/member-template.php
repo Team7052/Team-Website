@@ -1,5 +1,4 @@
 <?php 
-    session_start();
     $name = $_REQUEST['name'];
     $role = $_REQUEST['role'];
     $grade = $_REQUEST['grade'];
