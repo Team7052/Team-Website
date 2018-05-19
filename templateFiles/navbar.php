@@ -43,27 +43,9 @@
   </div>
 </div>
 
+<script type="text/javascript" src="../scripts/navbarJS.js"></script>
 <script type="text/javascript">
-  var dropdownTitles = document.getElementsByClassName('dropdown-title');
-  for (var i = 0; i < dropdownTitles.length; i++) {
-    dropdownTitles[i].onmouseover = function(event) {
-      let xmlhttp = new XMLHttpRequest();
-      xmlhttp.open("GET", "../phpScripts/setHoverTitle.php?title=" + event.target.innerHTML, true);
-      xmlhttp.send();
-    }
-  }
-
-  var dropdownItems = document.getElementsByClassName('navbar-dropdown-element-list-item');
-  for (var i = 0; i < dropdownItems.length; i++) {
-    dropdownItems[i].onclick = function(event) {
-      let xmlhttp = new XMLHttpRequest();
-      xmlhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-          document.location.href = this.responseText;
-        }
-      }
-      xmlhttp.open("GET", "../phpScripts/switchPage.php?subSection=" + event.target.innerHTML, true);
-      xmlhttp.send();
-    }
-  }
+  colorNavBar("<?php echo $_SESSION['currentTitle']; ?>");
+  addHoverToNavbarElements();
+  addChangePageAbilityToNavbarElements();
 </script>

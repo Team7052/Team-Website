@@ -40,6 +40,9 @@
   transition: all 0.5s ease;
   position: relative;
 }
+.navbar-element-current {
+  color: rgb(200,200,200);
+}
 .navbar-element-no-dropdown>a {
   /* Get rid of default underline */
   text-decoration: none;
@@ -62,10 +65,6 @@
   position: relative;
 }
 
-.navbar-element-current {
-  color: black;
-}
-
 .navbar-element:hover {
   background-color: rgba(255,255,255,0.6);
 }
@@ -84,6 +83,10 @@
   /* Inherit color fron navbar element */
   color: inherit;
   transition: color 0.5s ease;
+}
+
+.navbar-element>.dropdown-title-current {
+  color: rgb(200,200,200);
 }
 
 .navbar-dropdown-element-list {
