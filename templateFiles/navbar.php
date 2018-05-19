@@ -47,12 +47,8 @@
   var dropdownTitles = document.getElementsByClassName('dropdown-title');
   for (var i = 0; i < dropdownTitles.length; i++) {
     dropdownTitles[i].onmouseover = function(event) {
-      console.log(event.srcElement.innerHTML);
       let xmlhttp = new XMLHttpRequest();
-      xmlhttp.onreadystatechange = function() {
-        console.log(this.responseText);
-      }
-      xmlhttp.open("GET", "../phpScripts/setHoverTitle.php?title=" + event.srcElement.innerHTML, true);
+      xmlhttp.open("GET", "../phpScripts/setHoverTitle.php?title=" + event.target.innerHTML, true);
       xmlhttp.send();
     }
   }
@@ -66,7 +62,7 @@
           document.location.href = this.responseText;
         }
       }
-      xmlhttp.open("GET", "../phpScripts/switchPage.php?subSection=" + event.srcElement.innerHTML, true);
+      xmlhttp.open("GET", "../phpScripts/switchPage.php?subSection=" + event.target.innerHTML, true);
       xmlhttp.send();
     }
   }
