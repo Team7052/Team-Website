@@ -14,14 +14,16 @@ div.member-container {
   overflow: hidden;
   text-align: center;
 }
-div.member-container>.member-image {
+div.member-container>img.member-image {
   position: absolute;
-  left: -5%;
-  top: -5%;
+  left: -100%;
+  right: -100%;
+  top: -100%;
+  bottom: -100%;
+  margin: auto;
   width: auto;
   min-width: 110%;
-  height: auto;
-  max-height: auto;
+  height: 100%;
   min-height: 110%;
   background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8));
   z-index: 1;

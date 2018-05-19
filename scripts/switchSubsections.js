@@ -17,6 +17,7 @@ function switchSubSection(element, currentSection) {
       if (this.readyState == 4 && this.status == 200) {
         var doc = new DOMParser().parseFromString(this.responseText, "text/html");
         var scripts = doc.getElementsByTagName('script');
+        var i = 0;
         for (var i = 0; i < scripts.length; i++) {
             var script = document.createElement("script");
             script.type = "text/javascript";
@@ -25,9 +26,11 @@ function switchSubSection(element, currentSection) {
             }
             script.innerHTML = scripts[i].innerHTML;
             document.body.appendChild(script);
-            document.body.removeChild(document.body.lastChild);
         }
         currentPageSubsection.innerHTML = this.responseText;
+        for (var i = 0; i < scripts.length; i++) {
+          document.body.removeChild(document.body.lastChild);
+        }
       }
     }
     // set the currentSubsection
