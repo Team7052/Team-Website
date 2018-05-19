@@ -41,6 +41,7 @@ body {
   width: 100vw;
   left: 0;
   top: 25vh;
+  z-index: 1;
 }
 
 .page-title-section>.page-main-title {
@@ -50,7 +51,6 @@ body {
   font-size: 11vw; /* 8% of the width of the screen */
   font-weight: 600; /* Semi-bold */
   margin-left: 5vw;
-
 }
 .page-title-section>.page-main-subtitle {
   margin: inherit;

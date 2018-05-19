@@ -21,6 +21,7 @@
   left: 50%;
   overflow: visible;
   transform: translate(-50%, 0);
+  z-index: 2;
 }
 
 .navbar-logo-image {
