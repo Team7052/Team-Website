@@ -15,6 +15,8 @@ function switchSubSection(element, currentSection) {
     let xmlRequest = new XMLHttpRequest();
     xmlRequest.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
+        currentPageSubsection.innerHTML = this.responseText;
+        
         var doc = new DOMParser().parseFromString(this.responseText, "text/html");
         var scripts = doc.getElementsByTagName('script');
         var i = 0;
@@ -27,7 +29,6 @@ function switchSubSection(element, currentSection) {
             script.innerHTML = scripts[i].innerHTML;
             document.body.appendChild(script);
         }
-        currentPageSubsection.innerHTML = this.responseText;
         for (var i = 0; i < scripts.length; i++) {
           document.body.removeChild(document.body.lastChild);
         }
