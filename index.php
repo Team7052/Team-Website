@@ -7,10 +7,10 @@
 <html>
   <head>
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900" rel="stylesheet">
-    <link href="stylesheets/homeStyle.css" rel="stylesheet" type="text/css">
     <link href="stylesheets/global/navbarStyle.css" rel="stylesheet" type="text/css">
     <link href="stylesheets/global/footerStyle.css" rel="stylesheet" type="text/css">
     <link href="stylesheets/global/globalStyle.css" rel="stylesheet" type="text/css">
+    <link href="stylesheets/homeStyle.css" rel="stylesheet" type="text/css">
     <title>Team 7052</title>
   </head>
   <body>
@@ -65,7 +65,5 @@
       </div>
     </div>
   </body>
-  <?php
-  include("templateFiles/footer.html");
-  ?>
+  <?php include("templateFiles/footer.html"); ?>
 </html>
