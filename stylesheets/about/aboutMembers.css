@@ -52,16 +52,11 @@ div.member-container>div.member-overlay-view {
   z-index: 2;
   overflow: scroll;
   transition: all 0.5s ease;
-  opacity: 0;
 }
 
 div.member-container:hover>div.member-overlay-view {
   visibility: visible;
   width: 100%;
-  opacity: 1;
-}
-div.member-container:hover>img.member-image {
-  filter: blur(5px);
 }
 
 div.member-overlay-view>div.member-role {
