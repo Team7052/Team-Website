@@ -5,7 +5,7 @@
   <?php
     include("../phpScripts/functions.php");
     $_SESSION['currentTitle'] = "Media";
-    $_SESSION['sectionSubsections'] = array("Gallery", "News", "Social");
+    $_SESSION['sectionSubsections'] = array("Gallery", "Social");
     if (!stringIsInArray($_SESSION['currentSubsection'], $_SESSION['sectionSubsections'])) {
       $_SESSION['currentSubsection'] = $_SESSION['sectionSubsections'][0];
     }

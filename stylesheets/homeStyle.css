@@ -216,7 +216,7 @@
   grid-template-columns: 3fr 1fr 1fr 1fr 1fr;
   grid-template-areas:
     "title facebook insta youtube gallery"
-    "title facebook insta youtube news";
+    "title facebook insta youtube gallery";
   align-items: center;
   justify-items: center;
   position: absolute;
@@ -247,13 +247,7 @@
   grid-area: youtube;
 }
 #home-media-row>#galleryLink {
-  align-self: end;
-  margin-bottom: 15px;
   grid-area: gallery;
-}
-#home-media-row>#newsLink {
-  grid-area: news;
-  align-self: start;
 }
 .custom-underlined-link {
   color: white;
