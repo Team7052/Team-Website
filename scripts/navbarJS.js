@@ -25,19 +25,27 @@ window.onscroll = function() {
     let nav = document.getElementById('navbar');
     console.log(window.pageYOffset);
     if (window.pageYOffset >= window.innerHeight * 3 / 4) {
-        nav.style.position = "fixed";
-        nav.style.backgroundColor = "rgba(0,0,0,0.5)";
+        nav.style.position = 'fixed';
+        nav.style.backgroundColor = 'rgba(0,0,0,0.5)';
 
         for (element of this.document.getElementsByClassName('navbar-element')) {
-            element.className += ' navbar-element-dark';
+            element.className = 'navbar-element navbar-element-dark';
+        }
+        for (element of this.document.getElementsByClassName('navbar-dropdown-element-list-item')) {
+            element.className = 'navbar-dropdown-element-list-item navbar-dropdown-element-list-item-dark';
         }
     }
     else {
-        nav.style.position = "absolute";
-        nav.style.backgroundColor = "rgba(0,0,0,0)";
+        nav.style.position = 'absolute';
+        nav.style.backgroundColor = 'rgba(255,255,255,0.3)';
+
         for (element of this.document.getElementsByClassName('navbar-element')) {
             element.className = 'navbar-element';
         }
+        for (element of this.document.getElementsByClassName('navbar-dropdown-element-list-item')) {
+            element.className = 'navbar-dropdown-element-list-item';
+        }
+
     }
 }
 function addHoverToNavbarElements() {
