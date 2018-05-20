@@ -1,0 +1,64 @@
+#media-section {
+  display: grid;
+  grid-template-rows: auto auto auto;
+  grid-template-columns: 1fr 2.5fr;
+  grid-template-areas:
+    "facebook"
+    "instagram"
+    "youtube";
+  align-items: left;
+  justify-items: center;
+  height: 30vw;
+  margin-left: 5vw;
+  margin-top: 5vw;
+  margin-bottom: 5vw;
+}
+#media-section>#facebookLogo {
+  grid-area: facebook;
+  height: 5.5vw;
+}
+#media-section>#instagramLogo {
+  grid-area: instagram;
+  height: 5.5vw;
+}
+#media-section>#youtubeLogo {
+  grid-area: youtube;
+  height: 5.5vw;
+}
+#facebookLogo>h2 {
+  text-align: left;
+  justify-text: left;
+  padding-left: 18.5vw;
+
+}
+#instagramLogo>h2 {
+  text-align: left;
+  justify-text: left;
+  padding-left: 19vw;
+
+}
+#youtubeLogo>h2 {
+  text-align: left;
+  justify-text: left;
+  padding-left: 17.5vw;
+}
+#facebookLogo>h3 {
+  text-align: left;
+  justify-text: left;
+  padding-left: 17.9vw;
+  padding-top: 3vw;
+
+}
+#instagramLogo>h3 {
+  text-align: left;
+  justify-text: left;
+  padding-left: 15.4vw;
+  padding-top: 3vw;
+
+}
+#youtubeLogo>h3 {
+  text-align: left;
+  justify-text: left;
+  padding-left: 17.9vw;
+  padding-top: 3vw;
+}

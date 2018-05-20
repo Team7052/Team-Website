@@ -82,6 +82,14 @@ body {
   font-size: 5vw;
   margin-top: 10vh;
 }
+.page h2 {
+  font-weight: 450;
+  font-size: 2vw;
+}
+.page h3 {
+  font-weight: 300;
+  font-size: 1.25vw
+}
 .page-main-container {
   display: block;
   position: relative;
