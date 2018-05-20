@@ -89,7 +89,7 @@
     max-height: 80%;
 
     transition: 
-        all 1.0s;
+        all 0.5s;
 }
 .minor-sponsor-other-content {
     position: absolute;
@@ -107,7 +107,7 @@
     opacity: 0;
     transform: translateY(-100%);
 
-    transition: all 1.0s;
+    transition: all 0.5s;
 }
 .minor-sponsor-item>.minor-sponsor-item-title {
     text-align: center;

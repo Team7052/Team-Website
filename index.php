@@ -12,7 +12,10 @@
     <link href="stylesheets/global/globalStyle.css" rel="stylesheet" type="text/css">
     <link href="stylesheets/homeStyle.css" rel="stylesheet" type="text/css">
     <title>Team 7052</title>
-    <?php $_SESSION['currentTitle'] = "Home"; ?>
+    <?php 
+      $_SESSION['currentTitle'] = "Home"; 
+      $_SESSION['currentSubsection'] = "";
+    ?>
   </head>
   <body>
     <div class="home-page">

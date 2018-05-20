@@ -1,4 +1,4 @@
-<div class="navbar">
+<div id="navbar">
   <img class="navbar-logo-image" src="../public/images/logo.png">
   <div class="navbar-element-no-dropdown"><a href="../index.php">Home</a></div>
   <div class="navbar-element">
@@ -39,4 +39,5 @@
   colorNavBar("<?php echo $_SESSION['currentTitle']; ?>");
   addHoverToNavbarElements();
   addChangePageAbilityToNavbarElements();
+  addAutoScroll("<?php echo $_SESSION['currentTitle']; ?>", "<?php echo $_SESSION['currentSubsection']; ?>");
 </script>

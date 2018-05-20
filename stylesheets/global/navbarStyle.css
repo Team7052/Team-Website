@@ -1,4 +1,4 @@
-.navbar {
+#navbar {
   /* Set all text colour to white, align to center, and light font */
   color: white;
   text-align: center;
@@ -13,15 +13,21 @@
 
   /* Set navbar height to 75px and 80% width and center */
   height: 75px;
-  width: 90vw;
+  width: 100vw;
+  padding-left: 5vw;
+  padding-right: 5vw;
 
   /* Position navbar to the center */
   position: absolute;
-  top: 10px;
+  top: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
   left: 50%;
   overflow: visible;
   transform: translate(-50%, 0);
-  z-index: 2;
+  z-index: 10;
+  background-color: rgba(0,0,0,0);
+  transition: all 0.5s ease;
 }
 
 .navbar-logo-image {
@@ -29,6 +35,7 @@
   height: inherit;
   /* Padding to right to offset the rest of the nav elements */
   margin-right: 80px;
+  margin-left: 5vw;
 }
 /* Navbar element with no dropdown*/
 .navbar-element-no-dropdown {
@@ -76,6 +83,16 @@
   visibility: visible;
 }
 
+.navbar-element-dark:hover {
+  background-color: rgba(20,20,20,0.8);
+}
+
+.navbar-element-dark:hover>.navbar-dropdown-element-list {
+  display: block;
+  background-color: rgba(20,20,20,0.6);
+  opacity: 1;
+  visibility: visible;
+}
 
 .navbar-element>.dropdown-title {
   /* Get rid of default underline */
