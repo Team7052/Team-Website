@@ -26,7 +26,7 @@ window.onscroll = function() {
     console.log(window.pageYOffset);
     if (window.pageYOffset >= window.innerHeight * 3 / 4) {
         nav.style.position = 'fixed';
-        nav.style.backgroundColor = 'rgba(0,0,0,0.5)';
+        nav.style.backgroundColor = 'rgba(100,100,100,1)';
 
         for (element of this.document.getElementsByClassName('navbar-element')) {
             element.className = 'navbar-element navbar-element-dark';
@@ -37,7 +37,9 @@ window.onscroll = function() {
     }
     else {
         nav.style.position = 'absolute';
-        nav.style.backgroundColor = 'rgba(255,255,255,0.3)';
+        nav.style.backgroundColor = 'rgba(200,200,200,0.5)';
+
+        console.log(nav.style.backgroundColor);
 
         for (element of this.document.getElementsByClassName('navbar-element')) {
             element.className = 'navbar-element';
