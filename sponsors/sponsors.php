@@ -11,7 +11,12 @@
     }
     include("../templateFiles/header.php");
   ?>
+  <link rel="stylesheet" type="text/css" href="../stylesheets/sponsors/sponsorsStyle.css">
   <?php include("../templateFiles/start-template-page.php"); ?>
+
+    <div id="sponsors-container"></div>
+    <script type="text/javascript" src="sponsorsJS.js"></script>
+    <script type="text/javascript">loadSponsorsFromJSON();</script>
 
 
   <?php include("../templateFiles/end-template-page.php") ?>

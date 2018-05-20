@@ -1,0 +1,97 @@
+{
+    "sponsors": {
+        "platinum": [
+            {
+                "name": "Lakehead University",
+                "link": "https://www.lakeheadu.ca/",
+                "description": "A place for all to learn cool stuff. blah blah blah blah blah"
+            }
+        ],
+        "gold": [
+            {
+                "name": "Confederation College",
+                "link": "http://www.confederationcollege.ca/",
+                "description": "A place for all to learn cool stuff. blah blah blah blah blah"
+            },
+            {
+                "name": "Confederation College",
+                "link": "http://www.confederationcollege.ca/",
+                "description": "A place for all to learn cool stuff. blah blah blah blah blah"
+            }
+        ],
+        "silver": [
+            {
+                "name": "Deciphr",
+                "link": "https://www.sencia.ca/",
+                "description": ""
+            },
+            {
+                "name": "CG Labs",
+                "link": "https://www.sencia.ca/",
+                "description": ""
+            },
+            {
+                "name": "Sencia",
+                "link": "https://www.sencia.ca/",
+                "description": ""
+            },
+            {
+                "name": "CG Labs",
+                "link": "https://www.sencia.ca/",
+                "description": ""
+            },
+            {
+                "name": "Sencia",
+                "link": "https://www.sencia.ca/",
+                "description": ""
+            },
+            {
+                "name": "Sencia",
+                "link": "https://www.sencia.ca/",
+                "description": ""
+            },
+            {
+                "name": "Sencia",
+                "link": "https://www.sencia.ca/",
+                "description": ""
+            },
+            {
+                "name": "Sencia",
+                "link": "https://www.sencia.ca/",
+                "description": ""
+            },
+            {
+                "name": "Sencia",
+                "link": "https://www.sencia.ca/",
+                "description": ""
+            },
+            {
+                "name": "Sencia",
+                "link": "https://www.sencia.ca/",
+                "description": ""
+            }
+        ],
+        "bronze": [
+            {
+                "name": "Deciphr",
+                "link": "https://www.sencia.ca/",
+                "description": ""
+            },
+            {
+                "name": "Deciphr",
+                "link": "https://www.sencia.ca/",
+                "description": ""
+            },
+            {
+                "name": "Deciphr",
+                "link": "https://www.sencia.ca/",
+                "description": ""
+            },
+            {
+                "name": "Deciphr",
+                "link": "https://www.sencia.ca/",
+                "description": ""
+            }
+        ]
+    }
+}

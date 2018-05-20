@@ -17,7 +17,6 @@ function colorNavBar(currentTitle) {
                 title.className = "dropdown-title";
             }
         }
-        console.log(currentTitle);
     }
 }
 

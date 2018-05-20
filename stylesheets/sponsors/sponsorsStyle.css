@@ -1,0 +1,127 @@
+#sponsors-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.sponsor-level-title {
+    margin-left: 5vw;
+    margin-top: 5vw;
+    font-size: 5vw;
+    font-weight: 300;
+    border-bottom: 2px solid #333333;
+    padding-bottom: 10px;
+    margin-right: 5vw;
+}
+
+.major-sponsor-item {
+    background-color: white;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    margin-top: 2vw;
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-columns: 3fr 4fr;
+    grid-template-areas:
+        "img title"
+        "img description"
+        "img link";
+    padding: 10px;
+    align-items: center;
+    justify-items: center;
+}
+
+.major-sponsor-item>.major-sponsor-item-image {
+    grid-area: img;
+    max-width: 80%;
+    width: auto;
+    height: auto;
+    max-height: 80%;
+}
+.major-sponsor-item>.major-sponsor-item-title {
+    grid-area: title;
+    justify-self: start;
+    font-size: 2vw;
+}
+.major-sponsor-item>.major-sponsor-item-description {
+    grid-area: description;
+    font-weight: 400;
+    justify-self: stretch;
+    font-size: 1.5vw;
+    font-weight: 300;
+}
+.major-sponsor-item>.major-sponsor-item-link {
+    grid-area: link;
+    justify-self: end;
+}
+
+.minor-sponsors-container {
+    background-color: white;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    margin-top: 2vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: 15vh;
+    grid-gap: 5vw;
+    padding: 5vw;
+    align-content: center;
+    justify-items: center;
+}
+.last-minor-sponsors-container {
+    margin-bottom: 5vw;
+}
+
+.minor-sponsor-item {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.minor-sponsor-item>.minor-sponsor-item-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    max-width: 80%;
+    max-height: 80%;
+
+    transition: 
+        all 1.0s;
+}
+.minor-sponsor-other-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    visibility: hidden;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    opacity: 0;
+    transform: translateY(-100%);
+
+    transition: all 1.0s;
+}
+.minor-sponsor-item>.minor-sponsor-item-title {
+    text-align: center;
+    font-size: 2vw;
+    font-weight: 300;
+}
+
+.minor-sponsor-item:hover .minor-sponsor-item-image  {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(100%);
+}
+.minor-sponsor-item:hover .minor-sponsor-other-content {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
