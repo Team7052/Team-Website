@@ -3,9 +3,9 @@
   grid-template-rows: auto auto auto;
   grid-template-columns: 1fr 2.5fr;
   grid-template-areas:
-    "facebook"
-    "instagram"
-    "youtube";
+    "facebook image"
+    "instagram image"
+    "youtube image";
   align-items: left;
   justify-items: center;
   height: 30vw;
@@ -61,4 +61,17 @@
   justify-text: left;
   padding-left: 17.9vw;
   padding-top: 3vw;
+}
+#media-section>#social-image {
+  grid-area: image;
+  background: linear-gradient(rgba(154,154,154,0.25), rgba(154,154,154,0.25)), url("../../public/images/gallery/year2018/NWOScienceFair2018/preview-image.png");
+  background-size: cover;
+  width: 60%;
+  height: 85%;
+  justify-self: end;
+  margin-right: 12.5vw;
+  align-self: end;
+  margin-bottom: 4.25vw;
+
+  box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.4), 0 12px 30px 0 rgba(0, 0, 0, 0.4);
 }
