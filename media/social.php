@@ -28,5 +28,5 @@
   <div id="youtubeLogo">
     <h3> All our videos <h3>
   </div>
-
+  <div id="social-image"></div>
 </div>
