@@ -64,7 +64,7 @@
 }
 #media-section>#social-image {
   grid-area: image;
-  background: linear-gradient(rgba(154,154,154,0.25), rgba(154,154,154,0.25)), url("../../public/images/gallery/year2018/NWOScienceFair2018/preview-image.png");
+  background: linear-gradient(rgba(154,154,154,0.25), rgba(154,154,154,0.25)), url("../../public/images/gallery/year2018/NWOScienceFair2018/0preview-image.png");
   background-size: cover;
   width: 60%;
   height: 85%;
