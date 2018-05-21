@@ -96,11 +96,3 @@ function hideModal() {
     let modal = document.getElementById("gallery-modal");
     modal.style="visibility:hidden;opacity: 0;";
 }
-
-function linkRemoveThumbnailPrefix(string) {
-    var returnString = "";
-    for (var i = "thumbnail-".length; i < string.length; i++) {
-        returnString += string[i];
-    }
-    return returnString;
-}

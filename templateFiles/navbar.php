@@ -1,6 +1,6 @@
 <div id="navbar">
   <img class="navbar-logo-image" src="../public/images/logo.png">
-  <div class="navbar-element-no-dropdown"><a href="../index.php">Home</a></div>
+  <div class="navbar-element-no-dropdown">Home</div>
   <div class="navbar-element">
     <div class="dropdown-title">About</div>
     <ul class="navbar-dropdown-element-list">
@@ -40,4 +40,18 @@
   addHoverToNavbarElements();
   addChangePageAbilityToNavbarElements();
   addAutoScroll("<?php echo $_SESSION['currentTitle']; ?>", "<?php echo $_SESSION['currentSubsection']; ?>");
+  let homeNavElement = document.getElementsByClassName('navbar-element-no-dropdown')[0];
+  homeNavElement.onclick = function() {
+    let currentTitle = "<?php echo $_SESSION['currentTitle']; ?>";
+    if (currentTitle == "Home") {
+      window.scroll({
+            top: 0, // 95 = navbar height
+            left: 0,
+            behavior: 'smooth'
+        });
+    }
+    else {
+      document.location.href = "../index.php";
+    }
+  }
 </script>

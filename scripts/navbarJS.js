@@ -75,7 +75,7 @@ function addChangePageAbilityToNavbarElements() {
             let xmlhttp = new XMLHttpRequest();
             xmlhttp.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
-                document.location.href = this.responseText;
+                    document.location.href = this.responseText;
                 }
             }
             xmlhttp.open("GET", "../phpScripts/switchPage.php?subSection=" + event.target.innerHTML, true);

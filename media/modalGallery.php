@@ -1,7 +1,6 @@
 <?php 
     $year = $_REQUEST['year'];
     $folderName = $_REQUEST['folderName'];
-
     $dir = "../public/images/gallery/year$year/$folderName";
     $files = scandir($dir);
     $fileNames = "";
