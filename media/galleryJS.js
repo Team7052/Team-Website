@@ -73,13 +73,15 @@ function showGalleryPage(title, date, year, folder) {
             if (paths.length > 1) {
                 for (var i = 0; i < paths.length - 1; i++) {
                     let aTag = document.createElement("a");
-                    aTag.href = paths[i];
+                    aTag.href = paths[i].replace("thumbnail-", "");
+                    console.log(aTag.href);
                     aTag.target = "_blank";
                     let img = document.createElement("IMG");
                     img.src = paths[i];
                     img.className = "gallery-modal-image";
                     aTag.appendChild(img);
                     modalImageContainer.appendChild(aTag);
+                    console.log(paths[i]);
                 }
             }
             
@@ -93,4 +95,12 @@ function showGalleryPage(title, date, year, folder) {
 function hideModal() {
     let modal = document.getElementById("gallery-modal");
     modal.style="visibility:hidden;opacity: 0;";
+}
+
+function linkRemoveThumbnailPrefix(string) {
+    var returnString = "";
+    for (var i = "thumbnail-".length; i < string.length; i++) {
+        returnString += string[i];
+    }
+    return returnString;
 }

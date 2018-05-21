@@ -8,7 +8,9 @@
     foreach ($files as $file) {
         $ext = strtolower(extensionOf($file));
         if ($ext == "png" || $ext == "jpg" || $ext == "jpeg") {
-            $fileNames .= "$dir/$file\n";
+            if (beginsWith($file, "thumbnail-")) {
+                $fileNames .= "$dir/$file\n";
+            }
         }
     }
     echo $fileNames;
@@ -19,5 +21,19 @@
             return $extensions[count($extensions) - 1];
         }
         return "";
+    }
+
+    function beginsWith($string, $substring) {
+        $stringLen = strlen($string);
+        $substringLen = strlen($substring);
+        $isMatch = true;
+        for ($i = 0; $i < $stringLen; $i++) {
+            if ($i < $substringLen) {
+                if ($substring[$i] != $string[$i]) {
+                    $isMatch = false;
+                }
+            }
+        }
+        return $isMatch;
     }
 ?>
