@@ -1,3 +1,10 @@
+<?php
+  if(session_id() == '' || !isset($_SESSION)) {
+    // session isn't started
+    session_name('navigationSession');
+    session_start();
+  }
+?>
 <div id="navbar">
   <img class="navbar-logo-image" src="../public/images/logo.png">
   <div class="navbar-element-no-dropdown">Home</div>
@@ -34,15 +41,17 @@
   </div>
 </div>
 
+<script type="text/javascript" src="../scripts/switchSubsections.js"></script>
 <script type="text/javascript" src="../scripts/navbarJS.js"></script>
 <script type="text/javascript">
-  colorNavBar("<?php echo $_SESSION['currentTitle']; ?>");
+  getRequest("../phpScripts/setSessionVariable.php?var=currentTitle&value=" + "<?php echo $_SESSION[currentTitle] ?>");
+  colorNavBar("<?php echo $_SESSION[currentTitle] ?>");
   addHoverToNavbarElements();
   addChangePageAbilityToNavbarElements();
-  addAutoScroll("<?php echo $_SESSION['currentTitle']; ?>", "<?php echo $_SESSION['currentSubsection']; ?>");
+  addAutoScroll("<?php echo $_SESSION[currentTitle]; ?>", "<?php echo $_SESSION[currentSubsection]; ?>");
   let homeNavElement = document.getElementsByClassName('navbar-element-no-dropdown')[0];
   homeNavElement.onclick = function() {
-    let currentTitle = "<?php echo $_SESSION['currentTitle']; ?>";
+    let currentTitle = "<?php echo $_SESSION[currentTitle]; ?>";
     if (currentTitle == "Home") {
       window.scroll({
             top: 0, // 95 = navbar height

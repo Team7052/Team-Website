@@ -1,6 +1,12 @@
 
 <!-- Start a session -->
-<?php session_start(); ?>
+<?php 
+  if(session_id() == '' || !isset($_SESSION)) {
+    // session isn't started
+    session_name('navigationSession');
+    session_start();
+  }
+?>
 
 <!DOCTYPE HTML>
 
@@ -11,10 +17,11 @@
     <link href="stylesheets/global/footerStyle.css" rel="stylesheet" type="text/css">
     <link href="stylesheets/global/globalStyle.css" rel="stylesheet" type="text/css">
     <link href="stylesheets/homeStyle.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="scripts/main.js"></script>
     <title>Team 7052</title>
     <?php 
-      $_SESSION['currentTitle'] = "Home"; 
-      $_SESSION['currentSubsection'] = "";
+      $_SESSION[currentTitle] = "Home"; 
+      $_SESSION[currentSubsection] = "";
     ?>
   </head>
   <body>
@@ -23,12 +30,14 @@
         <!-- Create main background blurred image -->
         <div class="home-main-background-image"></div>
         <!-- Create navigation bar -->
-        <?php include("templateFiles/navbar.php"); ?>
-
+        <?php 
+          include("templateFiles/navbar.php");
+         ?>
         <!-- Content that is in the home page, when user first loads screen -->
         <div id="home-main-title">Falcotronix</div>
         <p id="home-main-subtitle">Team 7052 is a competitive robotics team from St. Ignatius High School and provides opportunities for all students to experience real world engineering through robotics.</p>
         <p id="home-main-location">Located in Thunder Bay, Ontario</p>
+        
       </div>
 
       <!-- About page screen -->

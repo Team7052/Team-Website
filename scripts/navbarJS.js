@@ -18,12 +18,12 @@ function colorNavBar(currentTitle) {
             }
         }
     }
+    
 }
 
 // auto navbar 
 window.onscroll = function() {
     let nav = document.getElementById('navbar');
-    console.log(window.pageYOffset);
     if (window.pageYOffset >= window.innerHeight * 3 / 4) {
         nav.style.position = 'fixed';
         nav.style.backgroundColor = 'rgba(100,100,100,1)';
@@ -46,8 +46,6 @@ window.onscroll = function() {
         }
         nav.style.backgroundColor = 'rgba(200,200,200,0.5)';
 
-        console.log(nav.style.backgroundColor);
-
         for (element of this.document.getElementsByClassName('navbar-element')) {
             element.className = 'navbar-element';
         }
@@ -61,25 +59,35 @@ function addHoverToNavbarElements() {
     let dropdownTitles = document.getElementsByClassName('dropdown-title');
     for (var i = 0; i < dropdownTitles.length; i++) {
         dropdownTitles[i].onmouseover = function(event) {
-        let xmlhttp = new XMLHttpRequest();
-        xmlhttp.open("GET", "../phpScripts/setHoverTitle.php?title=" + event.target.innerHTML, true);
-        xmlhttp.send();
+            let xmlhttp = new XMLHttpRequest();
+            xmlhttp.open("GET", "../phpScripts/setSessionVariable.php?var=hoverTitle&value=" + event.target.innerHTML, true);
+            xmlhttp.send();
         }
     }
 }
 
 function addChangePageAbilityToNavbarElements() {
     let dropdownItems = document.getElementsByClassName('navbar-dropdown-element-list-item');
-    for (var i = 0; i < dropdownItems.length; i++) {
-        dropdownItems[i].onclick = function(event) {
-            let xmlhttp = new XMLHttpRequest();
-            xmlhttp.onreadystatechange = function() {
-                if (this.readyState == 4 && this.status == 200) {
-                    document.location.href = this.responseText;
-                }
-            }
-            xmlhttp.open("GET", "../phpScripts/switchPage.php?subSection=" + event.target.innerHTML, true);
-            xmlhttp.send();
+    for (let item of dropdownItems) {
+        item.onclick = function(event) {
+            // get current title
+            getRequest("../phpScripts/getSessionVariable.php?var=currentTitle", function(currentTitle) {
+                console.log(currentTitle);
+                getRequest("../phpScripts/getSessionVariable.php?var=hoverTitle", function (hoverTitle) {
+                    hoverTitle = hoverTitle.replace("\"", "");
+                    console.log(hoverTitle + " = " + currentTitle);
+                    if (hoverTitle != currentTitle) {
+                        getRequest( "../phpScripts/switchPage.php?section=" + hoverTitle + "&subSection=" + event.target.innerHTML, function(response) {
+                            document.location.href = response;
+                        });
+                    }
+                    else {
+                        switchSubSection(event.target, hoverTitle);
+                    }
+                });
+                
+            });
+            
         }
     }
 }
@@ -92,26 +100,14 @@ function addAutoScroll(currentTitle, currentSubsection) {
             autoScrollNavTitleDecider(element, currentTitle, currentSubsection);
         });
     }
-            
 }
 
-function getSubsection(callback) {
-    let subsectionRequest = new XMLHttpRequest();
-    subsectionRequest.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-            callback(this.responseText);
-        }
-    }
-    subsectionRequest.open("GET", "../phpScripts/getCurrentSubsection.php");
-    subsectionRequest.send();
-}
 
 function autoScrollNavTitleDecider(element, currentTitle, currentSubsection) {
     if (currentTitle == "Home") {
         let targetElement = document.getElementById("home-" + element.innerHTML.toLowerCase() + "-section");
         let nav = document.getElementById('navbar');
         let pos = getPos(targetElement);
-        console.log(pos);
         window.scroll({
             top: pos.y - nav.offsetHeight, // 95 = navbar height
             left: 0,
@@ -119,16 +115,11 @@ function autoScrollNavTitleDecider(element, currentTitle, currentSubsection) {
         });
     }
     else if (element.innerHTML == currentTitle) {
-        
+        // scroll to the top
+        window.scroll({
+            top: 0,
+            left: 0,
+            behavior: 'smooth'
+        })
     }
-}
-
-function getPos(element, left = 0, top = 0) {
-    // yay readability
-    let newLeft = left + element.offsetLeft;
-    let newTop = top + element.offsetTop;
-    if (element.offsetParent != null) {
-        return getPos(element.offsetParent, newLeft, newTop);
-    }
-    return {x: newLeft, y: newTop};
 }

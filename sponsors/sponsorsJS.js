@@ -1,14 +1,61 @@
-let subNavElements = document.getElementsByClassName('sub-navbar-element');
-for (var i = 0; i < subNavElements.length; i++) {
-    subNavElements[i].addEventListener('click', function() {
-        removeSubsectionTitle();
-        // automatically scroll down page
-    });
-}
+addSubnavClickEvents();
 removeSubsectionTitle();
+removeSubnavColor();
+
+function addSubnavClickEvents() {
+    let subNavElements = document.getElementsByClassName('sub-navbar-element');
+    for (let item of subNavElements) {
+        item.addEventListener('click', function() {
+            removeSubsectionTitle();
+            item.className = "sub-navbar-element";
+            // automatically scroll down page
+            scrollToSponsorLevel(item.innerHTML);
+        });
+    }
+    let navbarElements = document.getElementsByClassName('navbar-dropdown-element-list-item');
+    for (let element of navbarElements) {
+        if (element.innerHTML == "Platinum" || element.innerHTML == "Gold" || element.innerHTML == "Silver" || element.innerHTML == "Bronze") {
+            element.addEventListener('click', function() {
+                scrollToSponsorLevel(element.innerHTML);
+                removeSubsectionTitle();
+            })
+        }
+    }
+}
+
 function removeSubsectionTitle() {
     let subtitle = document.getElementsByClassName('page-main-subtitle')[0];
     subtitle.innerHTML = "";
+}
+function scrollToSponsorLevel(level) {
+    let scrollElement = getElementOfSponsorLevelTitle(level);
+    console.log(scrollElement);
+    if (scrollElement == null) return;
+    let pos = getPos(scrollElement);
+    let nav = document.getElementById('navbar');
+    window.scroll({
+        top: pos.y - nav.offsetHeight,
+        left: 0,
+        behavior: 'smooth'
+    })
+}
+
+function removeSubnavColor() {
+    let subnavItems = document.getElementsByClassName('sub-navbar-elements');
+    for (let item of subnavItems) {
+        // get item
+        item.className = "sub-navbar-element";
+    }
+}
+
+function getElementOfSponsorLevelTitle(title) {
+    let levelTitles = document.getElementsByClassName('sponsor-level-title');
+    for (let element of levelTitles) {
+        if (element.innerHTML.includes(title)) {
+            return element;
+        }
+    }
+    return null;
 }
 
 function loadSponsorsFromJSON() {

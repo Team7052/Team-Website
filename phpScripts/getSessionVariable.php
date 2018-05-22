@@ -1,12 +1,9 @@
-<?php 
+<?php
     if(session_id() == '' || !isset($_SESSION)) {
         // session isn't started
         session_name('navigationSession');
         session_start();
-    }
+      }
+    $var = $_REQUEST['var'];
+    echo $_SESSION[$var];
 ?>
-</div>
-</div>
-</body>
-<script type="text/javascript" src="../scripts/switchSubsections.js"></script>
-<?php include("footer.html"); ?>
