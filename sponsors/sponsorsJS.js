@@ -78,23 +78,23 @@ function loadSponsorsFromJSON() {
             }
 
             sponsorsContainer.appendChild(createSponsorLevelTitle("Silver"));
-            // create container specifically for all silver sponsors
+            // create container specifically for all silver sponsors remove "last-minor-sponsors-container" later
             let silverSponsorsContainer = document.createElement('div');
-            silverSponsorsContainer.className = "minor-sponsors-container";
+            silverSponsorsContainer.className = "minor-sponsors-container last-minor-sponsors-container";
             sponsorsContainer.appendChild(silverSponsorsContainer);
 
             for (let sponsor of obj.sponsors.silver) {
                 silverSponsorsContainer.appendChild(createBronzeSilverSponsorElement(sponsor));
             }
-
-            sponsorsContainer.appendChild(createSponsorLevelTitle("Bronze"));
+            // create container specifically for all bronze sponsors removed for now
+        //    sponsorsContainer.appendChild(createSponsorLevelTitle("Bronze"));
             // create container specifically for all bronze sponsors
-            let bronzeSponsorsContainer = document.createElement('div');
-            bronzeSponsorsContainer.className = "minor-sponsors-container last-minor-sponsors-container";
-            sponsorsContainer.appendChild(bronzeSponsorsContainer);
-            for (let sponsor of obj.sponsors.bronze) {
-                bronzeSponsorsContainer.appendChild(createBronzeSilverSponsorElement(sponsor));
-            }
+          //  let bronzeSponsorsContainer = document.createElement('div');
+        //    bronzeSponsorsContainer.className = "minor-sponsors-container last-minor-sponsors-container";
+        //    sponsorsContainer.appendChild(bronzeSponsorsContainer);
+        //    for (let sponsor of obj.sponsors.bronze) {
+          //      bronzeSponsorsContainer.appendChild(createBronzeSilverSponsorElement(sponsor));
+        //    }
         }
     }
     jsonRequest.open("GET", "jsonFiles/sponsors.json");
@@ -134,7 +134,7 @@ function createGoldPlatinumSponsorElement(sponsor) {
     containerDiv.appendChild(sponsorTitle);
     containerDiv.appendChild(description);
     containerDiv.appendChild(seeSiteLink);
-    
+
     return containerDiv;
 }
 function createBronzeSilverSponsorElement(sponsor) {
@@ -146,7 +146,7 @@ function createBronzeSilverSponsorElement(sponsor) {
     let sponsorTitle = document.createElement("div");
     let description = document.createElement("div");
     let seeSiteLink = document.createElement("a");
-    //stores all the elements 
+    //stores all the elements
     let containerDiv = document.createElement("div");
 
     img.src = "../public/images/sponsorImages/" + sponsor.name + ".png";
@@ -173,6 +173,6 @@ function createBronzeSilverSponsorElement(sponsor) {
     otherContentsDiv.appendChild(description);
     otherContentsDiv.appendChild(seeSiteLink);
     containerDiv.appendChild(otherContentsDiv);
-    
+
     return containerDiv;
 }
