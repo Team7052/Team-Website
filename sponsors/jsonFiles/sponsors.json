@@ -1,11 +1,11 @@
 {
     "sponsors": {
         "platinum": [
-            {
-                "name": "Lakehead University",
-                "link": "https://www.lakeheadu.ca/",
-                "description": "A place for all to learn cool stuff. blah blah blah blah blah"
-            }
+          {
+              "name": "Lakehead University",
+              "link": "https://www.lakeheadu.ca/",
+              "description": "A place for all to learn cool stuff. blah blah blah blah blah"
+          }
         ],
         "gold": [
             {
@@ -14,15 +14,25 @@
                 "description": "A place for all to learn cool stuff. blah blah blah blah blah"
             },
             {
-                "name": "Confederation College",
-                "link": "http://www.confederationcollege.ca/",
+                "name": "Professional Engineers Ontario",
+                "link": "http://www.peo.on.ca/",
+                "description": "A place for all to learn cool stuff. blah blah blah blah blah"
+            },
+            {
+                "name": "Deciphr",
+                "link": "http://deciphr.ca/",
                 "description": "A place for all to learn cool stuff. blah blah blah blah blah"
             }
         ],
         "silver": [
             {
-                "name": "Deciphr",
-                "link": "http://deciphr.ca/",
+                "name": "CKPR",
+                "link": "http://www.ckpr.com/",
+                "description": ""
+            },
+            {
+                "name": "Iron Range",
+                "link": "http://www.ironrangebus.com/",
                 "description": ""
             },
             {
@@ -36,40 +46,16 @@
                 "description": ""
             },
             {
-                "name": "CG Labs",
-                "link": "http://cglabscorp.com/",
+                "name": "Kozar Engineering",
+                "link": "https://kozar.ca/",
                 "description": ""
             },
             {
-                "name": "Sencia",
-                "link": "https://www.sencia.ca/",
-                "description": ""
-            },
-            {
-                "name": "Sencia",
-                "link": "https://www.sencia.ca/",
-                "description": ""
-            },
-            {
-                "name": "Sencia",
-                "link": "https://www.sencia.ca/",
-                "description": ""
-            },
-            {
-                "name": "Sencia",
-                "link": "https://www.sencia.ca/",
-                "description": ""
-            },
-            {
-                "name": "Sencia",
-                "link": "https://www.sencia.ca/",
-                "description": ""
-            },
-            {
-                "name": "Sencia",
-                "link": "https://www.sencia.ca/",
+                "name": "Rock 94",
+                "link": "http://www.rock94.com/",
                 "description": ""
             }
+
         ],
         "bronze": [
             {
