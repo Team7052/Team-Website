@@ -3,7 +3,7 @@
   background-color: white;
   text-align: center;
   font-weight: 300;
-  font-size: 30px;
+  font-size: 5vw;
 
   /* Flex display in a row - span whole width */
   display: flex;
@@ -13,9 +13,9 @@
 
   /* Set position of subnavbar */
   position: absolute;
-  top: 55vh;
+  top: 40vh;
   left: 0;
-  height: 25vh;
+  height: 10vh;
   width: 100vw;
 }
 
@@ -44,4 +44,20 @@
 
 .sub-navbar-element-selected:hover {
   color: rgb(191,191,191);
+}
+
+@media only screen and (min-width: 600px) {
+  .sub-navbar {
+    font-size: 2.5vw;
+    height: 15vh;
+    top: 55vh;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  .sub-navbar {
+    font-size: 2.5vw;
+    height: 25vh;
+    top: 55vh;
+  }
 }

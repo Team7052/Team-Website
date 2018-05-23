@@ -48,7 +48,7 @@ body {
   margin: inherit;
   /* Set white font color, big text size, and semibolded weight  */
   color: white;
-  font-size: 11vw; /* 8% of the width of the screen */
+  font-size: 18vw; /* 8% of the width of the screen */
   font-weight: 600; /* Semi-bold */
   margin-left: 5vw;
 }
@@ -56,9 +56,9 @@ body {
   margin: inherit;
   /* Set white font color, regular sized text, and light font weight */
   color: white;
-  font-size: 3vw;
+  font-size: 6vw;
   font-weight: 350;
-  margin-left: 2vw;
+  margin-left: 4vw;
 }
 
 .page-subsection {
@@ -94,7 +94,7 @@ body {
   display: block;
   position: relative;
   overflow: hidden;
-  height: 80vh;
+  height: 50vh;
 }
 
 .page-background-image {
@@ -112,11 +112,44 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  height: 55vh;
+  height: 40vh;
   width: 100%;
 
   /* Apply a blur to the image */
   /* Can change blur amount when working with different images */
   filter: blur(5px);
   transform: scale(1.1);
+}
+
+@media only screen and (min-width: 600px) {
+  .page-main-container {
+    height: 70vh;
+  }
+  .page-background-image {
+    height: 55vh;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  .page-title-section>.page-main-title {
+    font-size: 11vw;
+  }
+  .page-title-section>.page-main-subtitle {
+    font-size: 3vw;
+    margin-left: 2vw;
+  }
+  .page-background-image {
+    height: 55vh;
+  }
+  .page-subsection {
+    position: unset;
+    top: unset;
+  }
+  .page-main-container {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    height: 80vh;
+  }
+
 }
