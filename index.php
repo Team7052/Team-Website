@@ -12,6 +12,7 @@
 
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900" rel="stylesheet">
     <link href="stylesheets/global/navbarStyle.css" rel="stylesheet" type="text/css">
     <link href="stylesheets/global/footerStyle.css" rel="stylesheet" type="text/css">
@@ -34,9 +35,11 @@
           include("templateFiles/navbar.php");
          ?>
         <!-- Content that is in the home page, when user first loads screen -->
-        <div id="home-main-title">Falcotronix</div>
-        <p id="home-main-subtitle">Team 7052 is a competitive robotics team from St. Ignatius High School and provides opportunities for all students to experience real world engineering through robotics.</p>
-        <p id="home-main-location">Located in Thunder Bay, Ontario</p>
+        <div id="home-main-text-container">
+          <div id="home-main-title">Falcotronix</div>
+          <p id="home-main-subtitle">Team 7052 is a competitive robotics team from St. Ignatius High School and provides opportunities for all students to experience real world engineering through robotics.</p>
+          <p id="home-main-location">Located in Thunder Bay, Ontario</p>
+        </div>
         
       </div>
 

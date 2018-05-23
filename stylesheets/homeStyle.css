@@ -14,8 +14,8 @@
 
 .home-page h1 {
   font-weight: 600;
-  font-size: 5vw;
-  margin-top: 10vh;
+  font-size: 8vw;
+  margin-top: 2vh;
   color:#333333;
 }
 
@@ -54,63 +54,59 @@
   margin-top: 5vh;
 }
 
+#home-main-text-container {
+  display: flex;
+  flex-direction: column;
+  height: 80%;
+  margin-top: 95px;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+
+
 #home-main-title {
   /* Set white font color, big text size, and semibolded weight  */
   color: white;
-  font-size: 8vw; /* 8% of the width of the screen */
+  font-size: 12vw; /* 8% of the width of the screen */
   font-weight: 600; /* Semi-bold */
-
-  /* Set position to be in the center and 25% from the top */
-  position: absolute;
-  left: 50%;
-  top: 30%;
-  transform: translate(-50%, -30%);
+  transform: translateY(-80%);
 }
 
 #home-main-subtitle {
   /* Set white font color, regular sized text, and light font weight */
   color: white;
-  font-size: 20px;
+  font-size: 5vw;
   font-weight: 300;
 
   /* Align text center*/
   text-align: center;
-  line-height: 2;
-  width: 60%;
-
-  /* Set position to be in the center and 50% from the top */
-  position: absolute;
-  left: 50%;
-  top: 55%;
-  transform: translate(-50%, -18px);
+  line-height: 1.5;
+  width: 80%;
 }
 
 #home-main-location {
   /* Set white font color, slightly large sized text, and light font weight */
   color: white;
-  font-size: 32px;
+  font-size: 7vw;
   font-weight: 300;
+  line-height: 1.5;
 
   /* Align text center */
   text-align: center;
   width: 60%;
-
-  /* Set position to be in the center and 75% from the top */
-  position: absolute;
-  left: 50%;
-  top: 80%;
-  transform: translate(-50%, -80%);
 }
 
 #home-about-section {
   background-color: white;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto auto;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto auto;
   grid-template-areas:
-    "title image"
-    "paragraph image"
-    "link image";
+    "title"
+    "image"
+    "paragraph"
+    "link";
   margin-left: 5vw;
   justify-items: start;
   z-index: 2;
@@ -122,11 +118,12 @@
 
 #home-about-section>p {
   grid-area: paragraph;
-  margin-top: -10px;
+  width: 95%;
 }
 #home-about-section>.underlined-link {
   grid-area: link;
   justify-self: end;
+  margin-right: 5vw;
 }
 
 #home-about-section>#home-about-image {
@@ -134,10 +131,9 @@
   background: linear-gradient(rgba(154,154,154,0.25), rgba(154,154,154,0.25)), url("../public/images/main-image.jpg");
   background-position: left;
   background-size: cover;
-  width: 75%;
-  height: 90%;
-  justify-self: end;
-  margin-right: 5vw;
+  width: 90vw;
+  height: 60vh;
+  justify-self: start;
   align-self: end;
 
   box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.4), 0 12px 30px 0 rgba(0, 0, 0, 0.4);
@@ -213,10 +209,10 @@
 #home-media-section>#home-media-row {
   display: grid;
   grid-template-rows: 1fr 1fr;
-  grid-template-columns: 3fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas:
-    "title facebook insta youtube gallery"
-    "title facebook insta youtube gallery";
+    "title facebook insta"
+    "title youtube gallery";
   align-items: center;
   justify-items: center;
   position: absolute;
@@ -234,7 +230,7 @@
 }
 
 #home-media-row img {
-  height: 35%;
+  height: 50%;
 }
 
 #home-media-row #facebookLogo {
@@ -289,4 +285,78 @@
 
 .footer {
   background-color: rgb(235,235,235);
+}
+
+@media only screen and (min-width: 600px) {
+  .home-main-container {
+    height: 100vh;
+  }
+  #home-main-title {
+    font-size: 10vw;
+    transform: unset;
+  }
+  #home-main-text-container {
+    margin-top: 5vw;
+    height: 90%;
+  }
+  #home-main-subtitle {
+    font-size: 2.5vw;
+    line-height: 2;
+    width: 60%;
+  }
+  
+  #home-main-location {
+    font-size: 4.5vw;
+    line-height: 2;
+  }
+  #home-about-section {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      "title image"
+      "paragraph image"
+      "link image";
+  }
+  #home-about-section>#home-about-image {
+    width: 75%;
+    height: 90%;
+    justify-self: end;
+    margin-right: 5vw;
+  }
+  #home-about-section>p {
+    margin-top: -10px;
+    padding: unset;
+    width: 100%;
+  }
+  #home-about-section>.underlined-link {
+    margin-right: unset;
+  }
+  #home-media-section>#home-media-row {
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 3fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      "title facebook insta youtube gallery"
+      "title facebook insta youtube gallery";
+  }
+  #home-media-row img {
+    height: 35%;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  .home-page h1 {
+    font-size: 5vw;
+    margin-top: 10vh;
+  }
+  #home-main-title {
+    font-size: 10vw;
+  }
+  #home-main-subtitle {
+    font-size: 1.5vw;
+    line-height: 2;
+  }
+  
+  #home-main-location {
+    font-size: 2.5vw;
+  }
 }

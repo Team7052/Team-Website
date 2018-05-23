@@ -12,7 +12,7 @@
   align-content: flex-end;
 
   /* Set navbar height to 75px and 80% width and center */
-  height: 75px;
+  height: 30px;
   width: 100vw;
   padding-left: 5vw;
   padding-right: 5vw;
@@ -20,8 +20,8 @@
   /* Position navbar to the center */
   position: absolute;
   top: 0;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
   left: 50%;
   overflow: visible;
   transform: translate(-50%, 0);
@@ -140,4 +140,10 @@
 
 .navbar-dropdown-element-list-item-dark:hover {
   color: rgba(200,200,200, 1.0);
+}
+
+@media only screen and (min-width: 600px) {
+  #navbar {
+    height: 10vh;
+  }
 }
