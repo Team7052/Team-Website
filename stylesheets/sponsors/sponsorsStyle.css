@@ -26,6 +26,7 @@
         "img description"
         "img link";
     padding: 10px;
+    height: 20vh;
     align-items: center;
     justify-items: center;
 }
@@ -33,9 +34,8 @@
 .major-sponsor-item>.major-sponsor-item-image {
     grid-area: img;
     max-width: 80%;
-    width: auto;
-    height: auto;
     max-height: 80%;
+    width: auto;
 }
 .major-sponsor-item>.major-sponsor-item-title {
     grid-area: title;
@@ -65,6 +65,7 @@
     grid-gap: 5vw;
     padding: 5vw;
     align-content: center;
+    -webkit-align-content: unset;
     justify-items: center;
 }
 .last-minor-sponsors-container {
