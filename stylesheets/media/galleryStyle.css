@@ -103,7 +103,7 @@ div.gallery-item>div {
     float: right;
     margin-right: 5vw;
     margin-top: 5vw;
-    font-size: 5vw;
+    font-size: 8vw;
     transition: color 0.5s ease;
     cursor: pointer;
 }
@@ -116,20 +116,21 @@ div.gallery-item>div {
     color: white;
     margin-left: 5vw;
     margin-top: 5vw;
-    font-size: 5vw;
+    font-size: 8vw;
     font-weight: 200;
+    width: 80%;
 }
 #gallery-modal-date {
     color: white;
     margin-left: 5vw;
-    font-size: 2vw;
+    font-size: 5vw;
     font-weight: 800;
 }
 
 #gallery-modal-images-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-auto-rows: 15vw;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 40vh;
     grid-gap: 2vw;
     margin: 5vw;
 }
@@ -156,6 +157,21 @@ div.gallery-item>div {
     div.gallery-item>div.gallery-image-crop {
         height: 60%;
     }
+    #gallery-modal-images-container {
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: 30vw;
+        grid-gap: 2vw;
+        margin: 5vw;
+    }
+    #gallery-modal-title {
+        font-size: 5vw;
+    }
+    #gallery-modal-date {
+        font-size: 2vw;
+    }
+    #gallery-modal-exit {
+        font-size: 5vw;
+    }
 }
 
 @media only screen and (min-width: 960px) {
@@ -170,5 +186,17 @@ div.gallery-item>div {
     div.gallery-item>div {
         font-size: 2vw;
         padding-top: 2vw;
+    }
+    #gallery-modal-images-container {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-auto-rows: 15vw;
+        grid-gap: 2vw;
+        margin: 5vw;
+    }
+    #gallery-modal-title {
+        font-size: 5vw;
+    }
+    #gallery-modal-date {
+        font-size: 2vw;
     }
 }

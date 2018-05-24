@@ -5,6 +5,9 @@
     session_start();
   }
 ?>
+<div id="navbar-mobile">
+
+</div>
 <div id="navbar">
   <img class="navbar-logo-image" src="../public/images/logo.png">
   <div class="navbar-element-no-dropdown">Home</div>

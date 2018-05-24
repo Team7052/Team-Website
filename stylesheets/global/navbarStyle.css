@@ -5,12 +5,6 @@
   font-weight: 300;
   font-size: calc(12px + 1vw);
 
-  /* Flex display in a row - span whole width */
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  align-content: flex-end;
-
   /* Set navbar height to 75px and 80% width and center */
   height: 30px;
   width: 100vw;
@@ -25,7 +19,7 @@
   left: 50%;
   overflow: visible;
   transform: translate(-50%, 0);
-  z-index: 10;
+  z-index: 20;
   background-color: rgba(200,200,200,0.5);
   transition: all 0.5s ease;
 }
@@ -33,9 +27,9 @@
 .navbar-logo-image {
   /* Logo is the same height as navbar */
   height: inherit;
+  text-align: center;
   /* Padding to right to offset the rest of the nav elements */
-  margin-right: 80px;
-  margin-left: 5vw;
+  
 }
 /* Navbar element with no dropdown*/
 .navbar-element-no-dropdown {
@@ -46,6 +40,7 @@
   cursor: pointer;
   transition: all 0.5s ease;
   position: relative;
+  display: none;
 }
 .navbar-element-current {
   color: #333333;
@@ -75,6 +70,7 @@
   cursor: pointer;
   transition: all 0.5s ease;
   position: relative;
+  display: none;
 }
 
 .navbar-element:hover {
@@ -144,6 +140,23 @@
 
 @media only screen and (min-width: 600px) {
   #navbar {
+    /* Flex display in a row - span whole width */
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    align-content: flex-end;
     height: 10vh;
   }
+  .navbar-logo-image {
+    margin-right: 80px;
+    margin-left: 5vw;
+  }
+
+  .navbar-element-no-dropdown {
+    display: block;
+  }
+  .navbar-element {
+    display: block;
+  }
+  
 }
