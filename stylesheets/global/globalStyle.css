@@ -13,6 +13,10 @@ body {
   scroll-behavior: smooth;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 .underlined-link {
   display: inline;
   text-decoration: none;

@@ -17,8 +17,7 @@ function colorNavBar(currentTitle) {
                 title.className = "dropdown-title";
             }
         }
-    }
-    
+    } 
 }
 
 // auto navbar 
@@ -52,9 +51,32 @@ window.onscroll = function() {
         for (element of this.document.getElementsByClassName('navbar-dropdown-element-list-item')) {
             element.className = 'navbar-dropdown-element-list-item';
         }
-
     }
 }
+
+let navMenu = document.getElementById('navbar-menu-icon');
+navMenu.addEventListener('click', showNavbarMenu);
+function showNavbarMenu() {
+    let nav = document.getElementById('navbar');
+    let overlay = document.getElementsByClassName('navbar-overlay')[0];
+    overlay.className = "navbar-overlay navbar-overlay-shown";
+    document.body.className = "no-scroll";
+    let navElements = document.getElementsByClassName('navbar-element');
+    for (let element of navElements) {
+        element.style.display = "block";
+    }
+    let homeElement = document.getElementsByClassName('navbar-element-no-dropdown')[0];
+    homeElement.style.display = "block";
+}
+
+let navElements = document.getElementsByClassName('navbar-element');
+for (let element of navElements) {
+    element.addEventListener('mouseover', mobileNavbarRepositionHover);
+}
+function mobileNavbarRepositionHover(event) {
+    
+}
+
 function addHoverToNavbarElements() {
     let dropdownTitles = document.getElementsByClassName('dropdown-title');
     for (var i = 0; i < dropdownTitles.length; i++) {
@@ -104,22 +126,24 @@ function addAutoScroll(currentTitle, currentSubsection) {
 
 
 function autoScrollNavTitleDecider(element, currentTitle, currentSubsection) {
-    if (currentTitle == "Home") {
-        let targetElement = document.getElementById("home-" + element.innerHTML.toLowerCase() + "-section");
-        let nav = document.getElementById('navbar');
-        let pos = getPos(targetElement);
-        window.scroll({
-            top: pos.y - nav.offsetHeight, // 95 = navbar height
-            left: 0,
-            behavior: 'smooth'
-        });
-    }
-    else if (element.innerHTML == currentTitle) {
-        // scroll to the top
-        window.scroll({
-            top: 0,
-            left: 0,
-            behavior: 'smooth'
-        })
+    if (document.body.classList.length == 0) {
+        if (currentTitle == "Home") {
+            let targetElement = document.getElementById("home-" + element.innerHTML.toLowerCase() + "-section");
+            let nav = document.getElementById('navbar');
+            let pos = getPos(targetElement);
+            window.scroll({
+                top: pos.y - nav.offsetHeight, // 95 = navbar height
+                left: 0,
+                behavior: 'smooth'
+            });
+        }
+        else if (element.innerHTML == currentTitle) {
+            // scroll to the top
+            window.scroll({
+                top: 0,
+                left: 0,
+                behavior: 'smooth'
+            })
+        }
     }
 }

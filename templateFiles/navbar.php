@@ -5,11 +5,15 @@
     session_start();
   }
 ?>
-<div id="navbar-mobile">
+<div class="navbar-overlay"></div>
 
-</div>
 <div id="navbar">
   <img class="navbar-logo-image" src="../public/images/logo.png">
+  <div id="navbar-menu-icon">
+    <div class="menu-icon-item"></div>
+    <div class="menu-icon-item"></div>
+    <div class="menu-icon-item"></div>
+  </div>
   <div class="navbar-element-no-dropdown">Home</div>
   <div class="navbar-element">
     <div class="dropdown-title">About</div>
