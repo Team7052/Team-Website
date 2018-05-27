@@ -49,7 +49,11 @@
   height: inherit;
   max-height: 30px;
   /* Padding to right to offset the rest of the nav elements */
-  display: inline-block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  
   text-align: center;
 }
 
@@ -61,10 +65,23 @@
   transform: translateY(-50%);
   right: 10%;
   cursor: pointer;
+  transition: all 0.5s ease;
 }
 #navbar-menu-icon:hover .menu-icon-item {
   background-color: rgb(200, 200, 200);
 }
+
+.menu-icon-item-x-top {
+  transform: rotateZ(45deg) translateY(10px);
+}
+.menu-icon-item-x-mid {
+  visibility: hidden;
+  opacity: 0;
+}
+.menu-icon-item-x-bot {
+  transform: rotateZ(-45deg) translateY(-10px);
+}
+
 #navbar-menu-icon>div {
   background-color: white;
   margin: 4px 0;
@@ -78,6 +95,7 @@
   flex-grow: 1;
   /* Give all nav elements a margin */
   margin: 5px;
+  margin-top: 10vh;
   cursor: pointer;
   transition: all 0.5s ease;
   position: relative;
@@ -197,6 +215,7 @@
     margin-right: 80px;
     margin-left: 5vw;
     max-height: unset;
+    transform: unset;
   }
   #navbar-menu-icon {
     display: none;
@@ -204,10 +223,10 @@
 
   .navbar-element-no-dropdown {
     display: block;
+    margin: 5px;
   }
   .navbar-element {
     display: block;
     margin: 5px;
   }
-  
 }

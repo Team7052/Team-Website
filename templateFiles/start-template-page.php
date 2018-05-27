@@ -8,10 +8,10 @@
 
 <body>
   <div class="page">
+    <?php include("navbar.php"); ?>
     <div class="page-main-container">
       <!-- Create background blurred image -->
       <div class="page-background-image" id="outreach-background-image"></div>
-      <?php include("navbar.php"); ?>
       
       <!-- Content that is in the about page, when user first loads screen -->
       <!-- Next two are global elements since they are used on every page -->

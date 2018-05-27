@@ -55,26 +55,102 @@ window.onscroll = function() {
 }
 
 let navMenu = document.getElementById('navbar-menu-icon');
-navMenu.addEventListener('click', showNavbarMenu);
-function showNavbarMenu() {
+navMenu.addEventListener('click', toggleNavBar);
+function toggleNavBar(event) {
+    console.log(event);
     let nav = document.getElementById('navbar');
-    let overlay = document.getElementsByClassName('navbar-overlay')[0];
-    overlay.className = "navbar-overlay navbar-overlay-shown";
-    document.body.className = "no-scroll";
-    let navElements = document.getElementsByClassName('navbar-element');
-    for (let element of navElements) {
-        element.style.display = "block";
+        let overlay = document.getElementsByClassName('navbar-overlay')[0]
+    if (overlay.classList.length == 1 && event != null) {
+        overlay.className = "navbar-overlay navbar-overlay-shown";
+        document.body.className = "no-scroll";
+        let navElements = document.getElementsByClassName('navbar-element');
+        for (let element of navElements) {
+            element.style.display = "block";
+        }
+        let homeElement = document.getElementsByClassName('navbar-element-no-dropdown')[0];
+        homeElement.style.display = "block";
+        let iconElements = document.getElementsByClassName('menu-icon-item');
+        iconElements[0].className = "menu-icon-item menu-icon-item-x-top";
+        iconElements[1].className = "menu-icon-item menu-icon-item-x-mid";
+        iconElements[2].className = "menu-icon-item menu-icon-item-x-bot";
+        console.log(nav.offsetTop + " " + window.pageYOffset);
+        if (window.pageYOffset < window.innerHeight / 2) {
+            window.scrollTo({
+                top: 0,
+                left: 0,
+                behavior: 'smooth'
+            });
+        }
     }
-    let homeElement = document.getElementsByClassName('navbar-element-no-dropdown')[0];
-    homeElement.style.display = "block";
+    else {
+        overlay.className = "navbar-overlay";
+        document.body.className = "";
+        let navElements = document.getElementsByClassName('navbar-element');
+        for (let element of navElements) {
+            element.style.display = "none";
+        }
+        let homeElement = document.getElementsByClassName('navbar-element-no-dropdown')[0];
+        homeElement.style.display = "none";
+        let iconElements = document.getElementsByClassName('menu-icon-item');
+        iconElements[0].className = "menu-icon-item";
+        iconElements[1].className = "menu-icon-item";
+        iconElements[2].className = "menu-icon-item";
+    }
+}
+var prevSize;
+window.onresize = function() {
+    if (prevSize < 600 && window.innerWidth >= 600) {
+        let navElements = document.getElementsByClassName('navbar-element');
+        for (let element of navElements) {
+            element.style.display = "block";
+        }
+        let homeElement = document.getElementsByClassName('navbar-element-no-dropdown')[0];
+        homeElement.style.display = "block";
+    }
+    else if (prevSize >= 600 && window.innerWidth < 600) {
+        let navElements = document.getElementsByClassName('navbar-element');
+        for (let element of navElements) {
+            element.style.display = "none";
+        }
+        let homeElement = document.getElementsByClassName('navbar-element-no-dropdown')[0];
+        homeElement.style.display = "none";
+    }
+    prevSize = window.innerWidth;
 }
 
 let navElements = document.getElementsByClassName('navbar-element');
-for (let element of navElements) {
-    element.addEventListener('mouseover', mobileNavbarRepositionHover);
+for (let elem of navElements) {
+    elem.addEventListener('mouseover', function() {
+        if (window.innerWidth < 600) {
+            var dropdown;
+            if (event.target.classList[0] == "dropdown-title") {
+                dropdown = event.target.parentElement.querySelectorAll('.navbar-dropdown-element-list')[0];
+            }
+            else {
+                dropdown = event.target.parentElement;
+            }
+            console.log(dropdown);
+            let marginIncrease = dropdown.offsetHeight;
+            // get all navbar-elements
+            let navElements = document.getElementsByClassName("navbar-element");
+            var prev = false;
+            for (let elem of navElements) {
+                if (prev) {
+                    elem.style.margin = "calc(4vh + " + marginIncrease + "px) 5px";
+                    elem.style.marginBottom = "4vh";
+                    prev = false;
+                }
+                if (elem == dropdown.parentElement) {
+                    prev = true;
+                }
+            }
+        }
+    });
 }
-function mobileNavbarRepositionHover(event) {
-    
+
+let dropdownItems = document.getElementsByClassName("navbar-dropdown-element-list-item");
+for (let element of dropdownItems) {
+    element.addEventListener('mouseout', resetNavPositioning);
 }
 
 function addHoverToNavbarElements() {
@@ -84,6 +160,16 @@ function addHoverToNavbarElements() {
             let xmlhttp = new XMLHttpRequest();
             xmlhttp.open("GET", "../phpScripts/setSessionVariable.php?var=hoverTitle&value=" + event.target.innerHTML, true);
             xmlhttp.send();
+        }
+        dropdownTitles[i].addEventListener('mouseout', resetNavPositioning);
+    }
+}
+
+function resetNavPositioning() {
+    if (window.innerWidth < 600) {
+        let navElements = document.getElementsByClassName('navbar-element');
+        for (let elem of navElements) {
+            elem.style.margin = "4vh 5px";
         }
     }
 }

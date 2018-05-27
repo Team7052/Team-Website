@@ -15,9 +15,14 @@ function switchSubSection(element, currentTitle) {
         left: 0,
         behavior: 'smooth'
       });
+      if (window.innerWidth < 600) {
+        // close nav
+        toggleNavBar(null); // pass null so that this always hides navbar, never toggles it ons
+      }
       Velocity(currentPageSubsection, {opacity: 0.0}, {duration: 500, complete: () => {
         currentPageSubsection.innerHTML = response;
         addScriptsToDocFromResponse(response);
+        
         Velocity(currentPageSubsection, {opacity: 1.0}, 500);
       }});
     });
