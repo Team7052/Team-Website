@@ -4,10 +4,10 @@ function switchSubSection(element, currentTitle) {
     // relabel page subtitle
     document.getElementsByClassName('page-main-subtitle')[0].innerHTML = element.innerHTML.toLowerCase()
   }
-  
   getRequest("../" + currentTitle  + "/" + element.innerHTML + ".html", function(response) {
     getRequest("../phpScripts/setSessionVariable.php?var=currentSubsection&value=" + element.innerHTML, function() {
       let currentPageSubsection = document.getElementsByClassName('page-subsection')[0];
+      console.log(response);
       // animate a fade
       currentPageSubsection.style.opacity = 1.0;
       window.scrollTo({
@@ -21,6 +21,7 @@ function switchSubSection(element, currentTitle) {
       }
       Velocity(currentPageSubsection, {opacity: 0.0}, {duration: 500, complete: () => {
         currentPageSubsection.innerHTML = response;
+        console.log(response);
         addScriptsToDocFromResponse(response);
         
         Velocity(currentPageSubsection, {opacity: 1.0}, 500);

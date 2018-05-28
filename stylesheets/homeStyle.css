@@ -115,6 +115,8 @@
 #home-about-section>p {
   grid-area: paragraph;
   width: 95%;
+  font-size: 6vw;
+  font-weight: 400;
 }
 #home-about-section>.underlined-link {
   grid-area: link;
