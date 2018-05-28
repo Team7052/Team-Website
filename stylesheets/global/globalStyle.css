@@ -2,6 +2,8 @@ html {
   /* Set global font family */
   font-family: "Source Sans Pro", sans-serif;
   color: #333333;
+  overflow-x: hidden;
+  position: relative;
 }
 
 body {
@@ -11,6 +13,8 @@ body {
   /* Overflow hidden constrains all elements to be inside of the window */
   overflow-x: hidden;
   scroll-behavior: smooth;
+  position: relative;
+
 }
 
 .no-scroll {

@@ -10,7 +10,7 @@
   <?php
     include("../phpScripts/functions.php");
     $_SESSION[currentTitle] = "Resources";
-    $_SESSION[sectionSubsections] = array("Blog", "For Rookies");
+    $_SESSION[sectionSubsections] = array("Blog");
     if (!stringIsInArray($_SESSION[currentSubsection], $_SESSION[sectionSubsections])) {
       $_SESSION[currentSubsection] = $_SESSION[sectionSubsections][0];
     }

@@ -43,7 +43,6 @@
     <div class="dropdown-title">Resources</div>
     <ul class="navbar-dropdown-element-list">
       <li class="navbar-dropdown-element-list-item">Blog</li>
-      <li class="navbar-dropdown-element-list-item">For Rookies</li>
     </ul>
   </div>
 </div>

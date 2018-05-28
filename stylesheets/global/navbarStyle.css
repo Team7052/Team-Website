@@ -17,7 +17,7 @@
   padding-top: 2vh;
   padding-bottom: 2vh;
   left: 50%;
-  overflow: visible;
+  overflow-y: visible;
   transform: translate(-50%, 0);
   z-index: 5;
   background-color: rgba(200,200,200,0.5);
