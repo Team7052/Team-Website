@@ -20,14 +20,6 @@ BlogManager.prototype.setCategory = function(category) {
     }
 }
 
-let blogManager = new BlogManager();
-// set current blogcategory
-
-
-window.onload = function() {
-    parseBlogs();
-}
-
 function parseBlogs() {
     getRequest("blog/blogs.json", function(response) {
         let blogsJson = JSON.parse(response);

@@ -21,9 +21,7 @@ function switchSubSection(element, currentTitle) {
       }
       Velocity(currentPageSubsection, {opacity: 0.0}, {duration: 500, complete: () => {
         currentPageSubsection.innerHTML = response;
-        console.log(response);
         addScriptsToDocFromResponse(response);
-        
         Velocity(currentPageSubsection, {opacity: 1.0}, 500);
       }});
     });
@@ -41,6 +39,7 @@ function highlightSubnavWithSelectedElement(element) {
 function addScriptsToDocFromResponse(response) {
   var doc = new DOMParser().parseFromString(response, "text/html");
     var scripts = doc.getElementsByTagName('script');
+    console.log(response);
     for (var i = 0; i < scripts.length; i++) {
         var script = document.createElement("script");
         script.type = "text/javascript";
@@ -48,6 +47,7 @@ function addScriptsToDocFromResponse(response) {
             script.src = scripts[i].src;
         }
         script.innerHTML = scripts[i].innerHTML;
+        console.log(script);
         document.body.appendChild(script);
     }
     for (var i = 0; i < scripts.length; i++) {
