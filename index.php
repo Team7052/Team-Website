@@ -1,6 +1,6 @@
 
 <!-- Start a session -->
-<?php 
+<?php
   if(session_id() == '' || !isset($_SESSION)) {
     // session isn't started
     session_name('navigationSession');
@@ -20,8 +20,8 @@
     <link href="stylesheets/homeStyle.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="scripts/main.js"></script>
     <title>Team 7052</title>
-    <?php 
-      $_SESSION[currentTitle] = "Home"; 
+    <?php
+      $_SESSION[currentTitle] = "Home";
       $_SESSION[currentSubsection] = "";
     ?>
   </head>
@@ -31,7 +31,7 @@
         <!-- Create main background blurred image -->
         <div class="home-main-background-image"></div>
         <!-- Create navigation bar -->
-        <?php 
+        <?php
           include("templateFiles/navbar.php");
          ?>
         <!-- Content that is in the home page, when user first loads screen -->
@@ -40,7 +40,7 @@
           <p id="home-main-subtitle">Team 7052 is a competitive robotics team from St. Ignatius High School and provides opportunities for all students to experience real world engineering through robotics.</p>
           <p id="home-main-location">Located in Thunder Bay, Ontario</p>
         </div>
-        
+
       </div>
 
       <!-- About page screen -->
@@ -51,7 +51,7 @@
         <div id="home-about-image"></div>
       </div>
 
-      <!-- Outreach page screen Hide outreach section temporarily --> 
+      <!-- Outreach page screen Hide outreach section temporarily -->
       <!--<div class="home-subsection" id="home-outreach-section">
         <h1>Outreach</h1>
         <p>We are always looking to impact as many people in STEM education as possible. Yearly, we go onto countless community outreach events. This summer, we are running the first ever Falcotronix Summer Camp where students from grades 5 - 8 will learn how to build small robots from scratch.</p>
