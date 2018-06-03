@@ -1,4 +1,4 @@
-function BlogManager() {    
+function BlogManager() {
     if (sessionStorage.currentBlogCategory) {
         this.setCategory(sessionStorage.currentBlogCategory);
     }
@@ -20,7 +20,15 @@ BlogManager.prototype.setCategory = function(category) {
     }
 }
 
-function parseBlogs() {
+function initBlog() {
+    if (typeof(blogManager) == "undefined") {
+        let blogManager = new BlogManager();
+        parseBlogs(blogManager);
+    }
+    else parseBlogs(blogManager);
+}
+
+function parseBlogs(manager) {
     getRequest("blog/blogs.json", function(response) {
         let blogsJson = JSON.parse(response);
         var blogs = [];
@@ -46,10 +54,10 @@ function parseBlogs() {
         for (let element of blogCategoryElements) {
             // add click event to manage current blog
             element.addEventListener('click', function() {
-                blogManager.setCategory(element.innerHTML);
+                manager.setCategory(element.innerHTML);
             });
         }
-        blogManager.setCategory(this.sessionStorage.currentBlogCategory);
+        manager.setCategory(this.sessionStorage.currentBlogCategory);
     });
 }
 
