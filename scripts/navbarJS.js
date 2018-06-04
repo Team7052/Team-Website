@@ -3,6 +3,7 @@ function loadNavFromJSON(callback) {
     let navbar = document.getElementById("navbar");
     let elements = navbar.querySelectorAll(".navbar-element");
     if (elements.length == 0) {
+        let navEvent = new Event('navbarLoad');
         getRequest("../jsonFiles/navbar.json", function(response) {
             let navbarStructure = JSON.parse(response);
             // adds all navbar-element with dropdown menus
@@ -91,11 +92,12 @@ window.onscroll = function() {
         }
     }
 }
+function showNavOnMenuIconClick() {
+    let navMenu = document.getElementById('navbar-menu-icon');
+    navMenu.addEventListener('click', toggleNavBar);
+}
 
-let navMenu = document.getElementById('navbar-menu-icon');
-navMenu.addEventListener('click', toggleNavBar);
 function toggleNavBar(event) {
-    console.log(event);
     let nav = document.getElementById('navbar');
         let overlay = document.getElementsByClassName('navbar-overlay')[0]
     if (overlay.classList.length == 1 && event != null) {
@@ -135,30 +137,34 @@ function toggleNavBar(event) {
         iconElements[2].className = "menu-icon-item";
     }
 }
-var prevSize;
-window.onresize = function() {
-    if (prevSize < 600 && window.innerWidth >= 600) {
-        let navElements = document.getElementsByClassName('navbar-element');
-        for (let element of navElements) {
-            element.style.display = "block";
+
+function responsiveNavResizing() {
+    var prevSize;
+    window.onresize = function() {
+        if (prevSize < 600 && window.innerWidth >= 600) {
+            let navElements = document.getElementsByClassName('navbar-element');
+            for (let element of navElements) {
+                element.style.display = "block";
+            }
+            let homeElement = document.getElementsByClassName('navbar-element-no-dropdown')[0];
+            homeElement.style.display = "block";
         }
-        let homeElement = document.getElementsByClassName('navbar-element-no-dropdown')[0];
-        homeElement.style.display = "block";
-    }
-    else if (prevSize >= 600 && window.innerWidth < 600) {
-        let navElements = document.getElementsByClassName('navbar-element');
-        for (let element of navElements) {
-            element.style.display = "none";
+        else if (prevSize >= 600 && window.innerWidth < 600) {
+            let navElements = document.getElementsByClassName('navbar-element');
+            for (let element of navElements) {
+                element.style.display = "none";
+            }
+            let homeElement = document.getElementsByClassName('navbar-element-no-dropdown')[0];
+            homeElement.style.display = "none";
         }
-        let homeElement = document.getElementsByClassName('navbar-element-no-dropdown')[0];
-        homeElement.style.display = "none";
+        prevSize = window.innerWidth;
     }
-    prevSize = window.innerWidth;
 }
 
-let navElements = document.getElementsByClassName('navbar-element');
-for (let elem of navElements) {
-    elem.addEventListener('mouseover', function() {
+function changeDropdownPositionOnClick() {
+    let navElements = document.getElementsByClassName('navbar-element');
+    for (let elem of navElements) {
+        elem.addEventListener('mouseover', function() {
         if (window.innerWidth < 600) {
             var dropdown;
             if (event.target.classList[0] == "dropdown-title") {
@@ -189,6 +195,7 @@ for (let elem of navElements) {
 let dropdownItems = document.getElementsByClassName("navbar-dropdown-element-list-item");
 for (let element of dropdownItems) {
     element.addEventListener('mouseout', resetNavPositioning);
+}
 }
 
 function addHoverToNavbarElements() {

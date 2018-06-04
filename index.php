@@ -69,5 +69,11 @@
       </div>
     </div>
   </body>
-  <?php include("templateFiles/footer.html"); ?>
+  <!-- Add footer with ajax -->
+  <footer></footer>
+  <script type="text/javascript">
+    getRequest("templateFiles/footer.html", function(response) {
+      document.getElementsByTagName('footer')[0].innerHTML = response;
+    });
+  </script>
 </html>

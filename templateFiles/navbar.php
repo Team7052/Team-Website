@@ -18,6 +18,9 @@
     addHoverToNavbarElements();
     addChangePageAbilityToNavbarElements();
     addAutoScroll();
+    showNavOnMenuIconClick();
+    responsiveNavResizing();
+    changeDropdownPositionOnClick();
     let homeNavElement = document.getElementsByClassName('navbar-element-no-dropdown')[0];
     homeNavElement.onclick = function() {
       let currentSection = sessionStorage.currentSection;

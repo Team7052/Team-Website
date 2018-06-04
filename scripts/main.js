@@ -48,7 +48,6 @@ function startSession(section) {
             sessionStorage.currentSubsection = subSections[0];
         }
     });
-    
 }
 
 function addScriptsToPage(element, response) {
