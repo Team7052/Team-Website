@@ -8,7 +8,7 @@ function loadGallery() {
             loadSequentialGalleryYears(galleryElement, galleryObj.gallery, 0);
         }
     }
-    jsonRequest.open("GET", "jsonFiles/galleryFolders.json");
+    jsonRequest.open("GET", "../jsonFiles/galleryFolders.json");
     jsonRequest.send();
 }
 /* By year, then by date */
@@ -74,17 +74,14 @@ function showGalleryPage(title, date, year, folder) {
                 for (var i = 0; i < paths.length - 1; i++) {
                     let aTag = document.createElement("a");
                     aTag.href = paths[i].replace("thumbnail-", "");
-                    console.log(aTag.href);
                     aTag.target = "_blank";
                     let img = document.createElement("IMG");
                     img.src = paths[i];
                     img.className = "gallery-modal-image";
                     aTag.appendChild(img);
                     modalImageContainer.appendChild(aTag);
-                    console.log(paths[i]);
                 }
             }
-            
             modal.style="visibility:visible;opacity: 1;";
         }
     }

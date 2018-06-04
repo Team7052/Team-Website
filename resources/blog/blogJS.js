@@ -29,7 +29,7 @@ function initBlog() {
 }
 
 function parseBlogs(manager) {
-    getRequest("blog/blogs.json", function(response) {
+    getRequest("../jsonFiles/blogs.json", function(response) {
         let blogsJson = JSON.parse(response);
         var blogs = [];
         var categories = ["Home"];

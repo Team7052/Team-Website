@@ -1,13 +1,3 @@
-
-<!-- Start a session -->
-<?php
-  if(session_id() == '' || !isset($_SESSION)) {
-    // session isn't started
-    session_name('navigationSession');
-    session_start();
-  }
-?>
-
 <!DOCTYPE HTML>
 
 <html>
@@ -20,10 +10,10 @@
     <link href="stylesheets/homeStyle.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="scripts/main.js"></script>
     <title>Team 7052</title>
-    <?php
-      $_SESSION[currentTitle] = "Home";
-      $_SESSION[currentSubsection] = "";
-    ?>
+    <script type="text/javascript">
+      sessionStorage.setItem("currentSection", "Home");
+      sessionStorage.setItem("currentSubsection", "");
+    </script>
   </head>
   <body>
     <div class="home-page">
@@ -40,7 +30,6 @@
           <p id="home-main-subtitle">Team 7052 is a competitive robotics team from St. Ignatius High School and provides opportunities for all students to experience real world engineering through robotics.</p>
           <p id="home-main-location">Located in Thunder Bay, Ontario</p>
         </div>
-
       </div>
 
       <!-- About page screen -->

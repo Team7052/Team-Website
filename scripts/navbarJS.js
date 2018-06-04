@@ -1,8 +1,46 @@
+function loadNavFromJSON(callback) {
+    // only load nav from json if there are no 'navbar-element's
+    let navbar = document.getElementById("navbar");
+    let elements = navbar.querySelectorAll(".navbar-element");
+    if (elements.length == 0) {
+        getRequest("../jsonFiles/navbar.json", function(response) {
+            let navbarStructure = JSON.parse(response);
+            // adds all navbar-element with dropdown menus
+            for (let item in navbarStructure) {
+                if (item != "Home") {
+                    let container = document.createElement("div");
+                    let dropdownTitle = document.createElement("div");
+                    let list = document.createElement("ul");
+    
+                    container.className = "navbar-element";
+                    dropdownTitle.className = "dropdown-title";
+                    list.className = "navbar-dropdown-element-list";
+    
+                    let listItems = navbarStructure[item];
+                    for (let subItem of listItems) {
+                        let listItem = document.createElement("li");
+                        listItem.className = "navbar-dropdown-element-list-item";
+                        listItem.innerHTML = subItem;
+                        list.appendChild(listItem);
+                    }
+    
+                    dropdownTitle.innerHTML = item;
+                    container.appendChild(dropdownTitle);
+                    container.appendChild(list);
+    
+                    navbar.appendChild(container);
+                }
+            }
+            callback();
+        });
+    }
+}
 
-function colorNavBar(currentTitle) {
+function colorNavBar() {
     // set current nav section color (but skip for now until full dropdown menu is created)
     // get current subsection
-    if (currentTitle == "Home") {
+    let currentSection = sessionStorage.currentSection;
+    if (currentSection == "Home") {
         let homeElement = document.getElementsByClassName('navbar-element-no-dropdown')[0];
         homeElement.className = "navbar-element-no-dropdown navbar-element-current";
     }
@@ -10,7 +48,7 @@ function colorNavBar(currentTitle) {
         let navBarElements = document.getElementsByClassName('navbar-element');
         for (i = 0; i < navBarElements.length; i++) {
             let title = document.getElementsByClassName('dropdown-title')[i];
-            if (title.innerHTML == currentTitle) {
+            if (title.innerHTML == currentSection) {
                 title.className = "dropdown-title dropdown-title-current";
             }
             else {
@@ -157,9 +195,7 @@ function addHoverToNavbarElements() {
     let dropdownTitles = document.getElementsByClassName('dropdown-title');
     for (var i = 0; i < dropdownTitles.length; i++) {
         dropdownTitles[i].onmouseover = function(event) {
-            let xmlhttp = new XMLHttpRequest();
-            xmlhttp.open("GET", "../phpScripts/setSessionVariable.php?var=hoverTitle&value=" + event.target.innerHTML, true);
-            xmlhttp.send();
+            sessionStorage.setItem("currentHoverSection", event.target.innerHTML);
         }
         dropdownTitles[i].addEventListener('mouseout', resetNavPositioning);
     }
@@ -179,33 +215,31 @@ function addChangePageAbilityToNavbarElements() {
     for (let item of dropdownItems) {
         item.onclick = function(event) {
             // get current title
-            getRequest("../phpScripts/getSessionVariable.php?var=currentTitle", function(currentTitle) {
-                console.log(currentTitle);
-                getRequest("../phpScripts/getSessionVariable.php?var=hoverTitle", function (hoverTitle) {
-                    hoverTitle = hoverTitle.replace("\"", "");
-                    console.log(hoverTitle + " = " + currentTitle);
-                    if (hoverTitle != currentTitle) {
-                        getRequest( "../phpScripts/switchPage.php?section=" + hoverTitle + "&subSection=" + event.target.innerHTML, function(response) {
-                            document.location.href = response;
-                        });
-                    }
-                    else {
-                        switchSubSection(event.target, hoverTitle);
-                    }
-                });
+            let currentSection = sessionStorage.currentSection;
+            let currentHoverSection = sessionStorage.currentHoverSection;
+            if (currentHoverSection != currentSection) {
+                sessionStorage.currentSection = currentHoverSection;
+                // set current subsection
+                sessionStorage.currentSubsection = event.target.innerHTML;
+                document.location.href = "../" + currentHoverSection + "/" + currentHoverSection + ".php";
+            }
+            else {
+                switchSubSection(event.target, currentHoverSection);
+            }
                 
-            });
             
         }
     }
 }
 
-function addAutoScroll(currentTitle, currentSubsection) {
+function addAutoScroll() {
+    let currentSection = sessionStorage.currentSection;
+    let currentSubsection = sessionStorage.currentSubsection
     // get current title subsection
     let navbarTitleElements = document.getElementsByClassName('dropdown-title');
     for (let element of navbarTitleElements) {
         element.addEventListener('click', function() {
-            autoScrollNavTitleDecider(element, currentTitle, currentSubsection);
+            autoScrollNavTitleDecider(element, currentSection, currentSubsection);
         });
     }
 }

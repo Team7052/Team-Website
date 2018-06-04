@@ -29,3 +29,41 @@ function getPos(element, left = 0, top = 0) {
     }
     return {x: newLeft, y: newTop};
 }
+
+function startSession(section) {
+    sessionStorage.setItem("currentSection", section);
+    getRequest("../jsonFiles/navbar.json", function(response) {
+        let navItems = JSON.parse(response);
+        let subSections = navItems[section];
+        var foundMatch = false;
+        if (sessionStorage.currentSubsection) {
+            for (let section of subSections) {
+                if (section == sessionStorage.currentSubsection) {
+                foundMatch = true;
+                }
+            }
+            if (!foundMatch) sessionStorage.currentSubsection = subSections[0];
+        }
+        else {
+            sessionStorage.currentSubsection = subSections[0];
+        }
+    });
+    
+}
+
+function addScriptsToPage(element, response) {
+    let scripts = element.querySelectorAll("script");
+    console.log(response);
+    for (var i = 0; i < scripts.length; i++) {
+        var script = document.createElement("script");
+        script.type = "text/javascript";
+        if (scripts[i].src != "") {
+            script.src = scripts[i].src;
+        }
+        script.innerHTML = scripts[i].innerHTML;
+        element.appendChild(script);
+    }
+    for (var i = 0; i < scripts.length; i++) {
+        element.removeChild(element.lastChild);
+    }
+}

@@ -2,10 +2,9 @@ function switchSubSection(element, currentTitle) {
   if (currentTitle != "Sponsors") {
     highlightSubnavWithSelectedElement(element);
     // relabel page subtitle
-    document.getElementsByClassName('page-main-subtitle')[0].innerHTML = element.innerHTML.toLowerCase()
-  }
-  getRequest("../" + currentTitle  + "/" + element.innerHTML + ".html", function(response) {
-    getRequest("../phpScripts/setSessionVariable.php?var=currentSubsection&value=" + element.innerHTML, function() {
+    document.getElementsByClassName('page-main-subtitle')[0].innerHTML = element.innerHTML.toLowerCase();
+    getRequest("../" + currentTitle  + "/" + element.innerHTML + ".html", function(response) {
+      sessionStorage.setItem("currentSubsection", element.innerHTML);
       let currentPageSubsection = document.getElementsByClassName('page-subsection')[0];
       console.log(response);
       // animate a fade
@@ -21,11 +20,11 @@ function switchSubSection(element, currentTitle) {
       }
       Velocity(currentPageSubsection, {opacity: 0.0}, {duration: 500, complete: () => {
         currentPageSubsection.innerHTML = response;
-        addScriptsToDocFromResponse(response);
+        addScriptsToPage(document.body, response);
         Velocity(currentPageSubsection, {opacity: 1.0}, 500);
       }});
     });
-  });
+  }
 }
 
 function highlightSubnavWithSelectedElement(element) {
@@ -34,23 +33,4 @@ function highlightSubnavWithSelectedElement(element) {
     if (item.innerHTML == element.innerHTML) item.className = "sub-navbar-element sub-navbar-element-selected";
     else item.className = "sub-navbar-element";
   }
-}
-
-function addScriptsToDocFromResponse(response) {
-  var doc = new DOMParser().parseFromString(response, "text/html");
-    var scripts = doc.getElementsByTagName('script');
-    console.log(response);
-    for (var i = 0; i < scripts.length; i++) {
-        var script = document.createElement("script");
-        script.type = "text/javascript";
-        if (scripts[i].src != "") {
-            script.src = scripts[i].src;
-        }
-        script.innerHTML = scripts[i].innerHTML;
-        console.log(script);
-        document.body.appendChild(script);
-    }
-    for (var i = 0; i < scripts.length; i++) {
-      document.body.removeChild(document.body.lastChild);
-    }
 }

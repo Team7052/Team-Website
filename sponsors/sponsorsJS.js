@@ -2,25 +2,29 @@ addSubnavClickEvents();
 removeSubsectionTitle();
 removeSubnavColor();
 
+
 function addSubnavClickEvents() {
-    let subNavElements = document.getElementsByClassName('sub-navbar-element');
-    for (let item of subNavElements) {
-        item.addEventListener('click', function() {
-            removeSubsectionTitle();
-            item.className = "sub-navbar-element";
-            // automatically scroll down page
-            scrollToSponsorLevel(item.innerHTML);
-        });
-    }
-    let navbarElements = document.getElementsByClassName('navbar-dropdown-element-list-item');
-    for (let element of navbarElements) {
-        if (element.innerHTML == "Platinum" || element.innerHTML == "Gold" || element.innerHTML == "Silver" || element.innerHTML == "Bronze") {
-            element.addEventListener('click', function() {
-                scrollToSponsorLevel(element.innerHTML);
+    let subnav = document.getElementById("subnav");
+    subnav.addEventListener('subnavLoaded', function() {
+        let subNavElements = document.getElementsByClassName('sub-navbar-element');
+        for (let item of subNavElements) {
+            item.addEventListener('click', function() {
                 removeSubsectionTitle();
-            })
+                item.className = "sub-navbar-element";
+                // automatically scroll down page
+                scrollToSponsorLevel(item.innerHTML);
+            });
         }
-    }
+        let navbarElements = document.getElementsByClassName('navbar-dropdown-element-list-item');
+        for (let element of navbarElements) {
+            if (element.innerHTML == "Platinum" || element.innerHTML == "Gold" || element.innerHTML == "Silver" || element.innerHTML == "Bronze") {
+                element.addEventListener('click', function() {
+                    scrollToSponsorLevel(element.innerHTML);
+                    removeSubsectionTitle();
+                })
+            }
+        }
+    });
 }
 
 function removeSubsectionTitle() {
@@ -97,7 +101,7 @@ function loadSponsorsFromJSON() {
         //    }
         }
     }
-    jsonRequest.open("GET", "jsonFiles/sponsors.json");
+    jsonRequest.open("GET", "../../jsonFiles/sponsors.json");
     jsonRequest.send();
 }
 
