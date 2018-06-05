@@ -1,3 +1,9 @@
+// events
+let navEvent = new Event('navbarLoad');
+let subNavLoadedEvent = new Event('subnavLoaded');
+let subsectionSwitchLoaded = new Event('subsectionSwitchLoaded');
+
+
 function parseJSON(file, callback) {
     let xmlRequest = new XMLHttpRequest();
     xmlRequest.onreadystatechange = function() {
@@ -52,7 +58,6 @@ function startSession(section) {
 
 function addScriptsToPage(element, response) {
     let scripts = element.querySelectorAll("script");
-    console.log(response);
     for (var i = 0; i < scripts.length; i++) {
         var script = document.createElement("script");
         script.type = "text/javascript";

@@ -3,7 +3,6 @@ function loadNavFromJSON(callback) {
     let navbar = document.getElementById("navbar");
     let elements = navbar.querySelectorAll(".navbar-element");
     if (elements.length == 0) {
-        let navEvent = new Event('navbarLoad');
         getRequest("../jsonFiles/navbar.json", function(response) {
             let navbarStructure = JSON.parse(response);
             // adds all navbar-element with dropdown menus

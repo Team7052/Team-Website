@@ -6,7 +6,6 @@ function switchSubSection(element, currentTitle) {
     getRequest("../" + currentTitle  + "/" + element.innerHTML + ".html", function(response) {
       sessionStorage.setItem("currentSubsection", element.innerHTML);
       let currentPageSubsection = document.getElementsByClassName('page-subsection')[0];
-      console.log(response);
       // animate a fade
       currentPageSubsection.style.opacity = 1.0;
       window.scrollTo({
@@ -21,6 +20,7 @@ function switchSubSection(element, currentTitle) {
       Velocity(currentPageSubsection, {opacity: 0.0}, {duration: 500, complete: () => {
         currentPageSubsection.innerHTML = response;
         addScriptsToPage(document.body, response);
+        window.dispatchEvent(subsectionSwitchLoaded);
         Velocity(currentPageSubsection, {opacity: 1.0}, 500);
       }});
     });

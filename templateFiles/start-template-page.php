@@ -35,9 +35,7 @@
 
         pageTitle.innerHTML = currentSection;
         pageSubtitle.innerHTML = currentSubsection.toLowerCase();
-
-        var subNavLoadedEvent = new Event('subnavLoaded');
-
+        
         getRequest("../jsonFiles/navbar.json", function(response) {
           let navbarSections = JSON.parse(response);
           let subsections = navbarSections[currentSection];
@@ -59,11 +57,12 @@
       <!-- Load correct subsection from current section and subsection -->
       <script>
         if (sessionStorage.currentSection != "Sponsors") {
+          console.log("../" + sessionStorage.currentSection + "/" + sessionStorage.currentSubsection + ".html");
           getRequest("../" + sessionStorage.currentSection + "/" + sessionStorage.currentSubsection + ".html", function(response) {
             let page = document.body.querySelector(".page-subsection");
+            console.log(page);
             page.innerHTML = response;
             addScriptsToPage(page, response);
           });
         }
-        
       </script>

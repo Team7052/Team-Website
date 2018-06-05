@@ -5,5 +5,11 @@
 
 <script type="text/javascript" src="blog/blogJS.js"></script>
 <script type="text/javascript">
-  initBlog();
+  window.addEventListener('load', function() {
+    parseBlogs();
+  });
+  window.addEventListener('subsectionSwitchLoaded', function() {
+    parseBlogs();
+    console.log(blogs);
+  });
 </script>
