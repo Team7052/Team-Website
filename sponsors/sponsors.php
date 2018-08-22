@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
   <?php
-    include("../templateFiles/header.php");
+    include("../templateFiles/header.html");
   ?>
   <link rel="stylesheet" type="text/css" href="../stylesheets/sponsors/sponsorsStyle.css">
   <?php include("../templateFiles/start-template-page.php"); ?>

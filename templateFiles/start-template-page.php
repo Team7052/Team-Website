@@ -1,14 +1,6 @@
-<?php 
-  /*if(session_id() == '' || !isset($_SESSION)) {
-    // session isn't started
-    session_name('navigationSession');
-    session_start();
-  }*/
-?>
-
 <body>
   <div class="page">
-    <?php include("navbar.php"); ?>
+    <?php include("navbar.html"); ?>
     <div class="page-main-container">
       <!-- Create background blurred image -->
       <div class="page-background-image" id="outreach-background-image"></div>

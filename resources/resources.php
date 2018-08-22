@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
   <?php
-    include("../templateFiles/header.php");
+    include("../templateFiles/header.html");
   ?>
   <script type="text/javascript" src="../scripts/main.js"></script>
   <script type="text/javascript">startSession("Resources")</script>

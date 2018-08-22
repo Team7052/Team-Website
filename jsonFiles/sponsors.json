@@ -1,27 +1,32 @@
 {
     "sponsors": {
         "platinum": [
-          {
-              "name": "Lakehead University",
-              "link": "https://www.lakeheadu.ca/",
-              "description": "A place for all to learn cool stuff. blah blah blah blah blah"
-          }
+            {
+                "name": "Lakehead University",
+                "link": "https://www.lakeheadu.ca/",
+                "description": ""
+            },
+            {
+                "name": "Sencia",
+                "link": "https://www.sencia.ca/",
+                "description": ""
+            }
         ],
         "gold": [
             {
                 "name": "Confederation College",
                 "link": "http://www.confederationcollege.ca/",
-                "description": "A place for all to learn cool stuff. blah blah blah blah blah"
+                "description": ""
             },
             {
                 "name": "Professional Engineers Ontario",
                 "link": "http://www.peo.on.ca/",
-                "description": "A place for all to learn cool stuff. blah blah blah blah blah"
+                "description": ""
             },
             {
                 "name": "Deciphr",
                 "link": "http://deciphr.ca/",
-                "description": "A place for all to learn cool stuff. blah blah blah blah blah"
+                "description": ""
             }
         ],
         "silver": [
@@ -63,26 +68,7 @@
 
         ],
         "bronze": [
-            {
-                "name": "Deciphr",
-                "link": "http://deciphr.ca/",
-                "description": ""
-            },
-            {
-                "name": "Deciphr",
-                "link": "http://deciphr.ca/",
-                "description": ""
-            },
-            {
-                "name": "Deciphr",
-                "link": "http://deciphr.ca/",
-                "description": ""
-            },
-            {
-                "name": "Deciphr",
-                "link": "http://deciphr.ca/",
-                "description": ""
-            }
+            
         ]
     }
 }

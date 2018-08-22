@@ -227,6 +227,7 @@ function addChangePageAbilityToNavbarElements() {
                 sessionStorage.currentSection = currentHoverSection;
                 // set current subsection
                 sessionStorage.currentSubsection = event.target.innerHTML;
+                console.log(sessionStorage.currentSubsection);
                 document.location.href = "../" + currentHoverSection + "/" + currentHoverSection + ".php";
             }
             else {

@@ -22,7 +22,7 @@
         <div class="home-main-background-image"></div>
         <!-- Create navigation bar -->
         <?php
-          include("templateFiles/navbar.php");
+          include("templateFiles/navbar.html");
          ?>
         <!-- Content that is in the home page, when user first loads screen -->
         <div id="home-main-text-container">
