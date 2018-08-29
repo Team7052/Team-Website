@@ -9,11 +9,11 @@ class MediaSocial extends Component {
             <div className="section-wrapper">
                 <PageTemplate pageTitle={this.props.sectionName} pageSubtitle={this.props.subsection} pageInfo={this.props.sectionKeys}/>
                 <div id="media-section">
-                    <img className="social-image-logo" id="facebookLogo" src="/images/socialMediaLogos/facebook.png"/>
+                    <img className="social-image-logo" id="facebookLogo" src="/images/socialMediaLogos/facebook.png" alt="not found"/>
                     <a href="https://instagram.com/falcotronix">
-                        <img className="social-image-logo" id="instagramLogo" src="/images/socialMediaLogos/instagram.png"/>
+                        <img className="social-image-logo" id="instagramLogo" src="/images/socialMediaLogos/instagram.png" alt="not found"/>
                     </a>
-                    <img className="social-image-logo" id="youtubeLogo" src="/images/socialMediaLogos/youtube.png"/>
+                    <img className="social-image-logo" id="youtubeLogo" src="/images/socialMediaLogos/youtube.png" alt="not found"/>
 
                     <div className="social-description" id="facebookDescription">
                         <h2> Facebook </h2>

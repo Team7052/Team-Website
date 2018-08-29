@@ -65,7 +65,7 @@ class MediaGallery extends Component {
     }
     handleGalleryClick(folderName, year) {
         // get gallery item
-        let galleryItem = this.props.data.gallery["year" + year].find((item) => item.folderName == folderName);
+        let galleryItem = this.props.data.gallery["year" + year].find((item) => item.folderName === folderName);
         if (galleryItem != null) {
             this.setState({showingModal: true, currentGalleryItem: galleryItem, currentGalleryYear: year}, this.startFetchingImages);
         }
@@ -75,7 +75,7 @@ class MediaGallery extends Component {
     }
 
     startFetchingImages(startIndex = 0) {
-        if (startIndex == 0) {
+        if (startIndex === 0) {
             fetch("/images/gallery/year" + this.state.currentGalleryYear + "/" + this.state.currentGalleryItem.folderName + "/thumbnail-0preview-image.png")
             .then((response) => response.arrayBuffer())
             .then((buffer) => {
@@ -112,7 +112,7 @@ class MediaGallery extends Component {
                         if (buffer.byteLength > 10000) {
                             var newArr = this.state.imagePaths;
                             newArr.push(base64Flag + imageStr);
-                            if (i == startIndex + 9) {
+                            if (i === startIndex + 9) {
                                 this.setState({imagePaths: newArr}, () => this.startFetchingImages(startIndex + 10));
                             }
                             else {

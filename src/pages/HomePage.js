@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import "../stylesheets/homeStyle.css";
 import "../stylesheets/global/globalStyle.css"
-import { Link } from "react-router-dom";
 import Footer from "../Footer";
 
 class HomePage extends Component {
