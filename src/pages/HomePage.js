@@ -24,7 +24,7 @@ class HomePage extends Component {
                 <div className="home-subsection" id="home-about-section">
                     <h1>About Us</h1>
                     <p>Falcotronix is a high school robotics team from St. Ignatius. We are part of FIRST Robotics, a world-wide high school robotics competition. Our mission is to promote STEM (Science, Technology, Engineering and Math) education in a team environment across Northwestern Ontario.</p>
-                    <Link className="underlined-link" to="/about/TheTeam">Read More</Link>
+                    <a className="underlined-link" to="/about/team">Read More</a>
                     <div id="home-about-image"></div>
                 </div>
 
@@ -43,7 +43,7 @@ class HomePage extends Component {
                         <img id="facebookLogo" src="/images/socialMediaLogos/facebook.png" alt="Facebook Logo"/>
                         <img id="instagramLogo" src="/images/socialMediaLogos/instagram.png" alt="Instagram Logo"/>
                         <img id="youtubeLogo" src="/images/socialMediaLogos/youtube.png" alt="Youtube Logo"/>
-                        <a id="galleryLink" href="media/media.php" className="custom-underlined-link">Gallery</a>
+                        <a id="galleryLink" href="media/gallery" className="custom-underlined-link">Gallery</a>
                     </div>
                 </div>
 
@@ -53,7 +53,7 @@ class HomePage extends Component {
                         <img className="home-sponsor-image" id="home-sponsor-image1" src="/images/lakehead.png" alt="Lakehead Logo"/>
                         <img className="home-sponsor-image" id="home-sponsor-image2" src="/images/concollege.png" alt="Confederation College Logo"/>
                     </div>
-                    <a href="sponsors/sponsors.php" className="underlined-link">See all</a>
+                    <a href="sponsors/platinum" className="underlined-link">See all</a>
                 </div>
                 <Footer type="grayed"/>
             </div>

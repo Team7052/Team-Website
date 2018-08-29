@@ -20,11 +20,8 @@ class PageTemplate extends Component {
                     { /* Renamed to sub-navbar since this will be a global element (used in every page) */ }
                     <div id="subnav" className="sub-navbar">
                         {this.props.pageInfo.map((item, i) => {
-                            console.log(this.props.pageSubtitle);
-                            console.log(this.props.name);
-                            console.log(this.props.pageSubtitle == item.name);
                             return (
-                                <div key={i} className={this.props.pageSubtitle.toLowerCase() == item.name.toLowerCase() ? 'sub-navbar-element sub-navbar-element-selected' : 'sub-navbar-element'}>
+                                <div key={i} className={this.props.pageSubtitle.toLowerCase() === item.name.toLowerCase() ? 'sub-navbar-element sub-navbar-element-selected' : 'sub-navbar-element'}>
                                     <Link to={item.link}> {item.name} </Link>
                                 </div>
                             )
