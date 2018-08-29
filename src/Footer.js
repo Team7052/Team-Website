@@ -5,9 +5,9 @@ class Footer extends Component {
   render() {
     if (this.props.type === "grayed") {
       return (
-        <footer class="footer gray-footer">
-          <div class="footer-trademark">Falcotronix 2018 ®</div>
-          <div class="footer-contact">team7052@falcotronix.com</div>
+        <footer className="footer gray-footer">
+          <div className="footer-trademark">Falcotronix 2018 ®</div>
+          <div className="footer-contact">team7052@falcotronix.com</div>
         </footer>
       )
     }

@@ -38,7 +38,7 @@
   margin: inherit;
   /* Set white font color, big text size, and semibolded weight  */
   color: white;
-  font-size: 18vw; /* 8% of the width of the screen */
+  font-size: 15vw; /* 8% of the width of the screen */
   font-weight: 600; /* Semi-bold */
   margin-left: 5vw;
 }
