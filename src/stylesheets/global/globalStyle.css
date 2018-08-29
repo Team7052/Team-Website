@@ -90,7 +90,7 @@
 .page-background-image {
   /* Set the background image with a 40% opacity gray overlay */
   /* Change the gray value and opacity depending on background image and visibilty of text */
-  background-image: linear-gradient(rgba(152,152,152, 0.25), rgba(152,152,152, 0.25)), url("/images/team-image.jpg");
+  background-image: linear-gradient(rgba(100,100,100, 0.5), rgba(100,100,100, 0.5)), url("/images/team-image.jpg");
   /* Only 1 copy of the background is used (don't tile) */
   background-repeat: no-repeat;
   /* Cover whole entire div */
