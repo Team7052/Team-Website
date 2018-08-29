@@ -1,0 +1,11 @@
+#blog-section {
+    margin: 5vw;
+    padding: 5vw;
+    background-color: white;
+    font-size: 2vw;
+}
+
+#blog-section>a {
+    color: blue;
+    text-decoration: underline;
+}

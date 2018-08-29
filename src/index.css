@@ -1,0 +1,15 @@
+body {
+  /* Get rid of auto browser margin and padding */
+  margin: 0;
+  padding: 0;
+  /* Overflow hidden constrains all elements to be inside of the window */
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  position: relative;
+}
+
+html {
+  font-family: "Source Sans Pro", sans-serif;
+  color: #333333;
+  overflow-x: hidden;
+}
