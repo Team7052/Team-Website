@@ -47,7 +47,7 @@ class HomePage extends Component {
                 <div className="home-subsection" id="home-about-section">
                     <h1>About Us</h1>
                     <p>Falcotronix is a high school robotics team from St. Ignatius. We are part of FIRST Robotics, a world-wide high school robotics competition. Our mission is to promote STEM (Science, Technology, Engineering and Math) education in a team environment across Northwestern Ontario.</p>
-                    <a className="underlined-link" to="/about/team">Read More</a>
+                    <a className="underlined-link" href="/about/team">Read More</a>
                     <div id="home-about-image"></div>
                 </div>
 
