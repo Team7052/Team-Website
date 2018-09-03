@@ -46,11 +46,6 @@ let SponsorsData = {
                 "description": ""
             },
             {
-                "name": "Sencia",
-                "link": "https://www.sencia.ca/",
-                "description": ""
-            },
-            {
                 "name": "Kozar Engineering",
                 "link": "https://kozar.ca/",
                 "description": ""
