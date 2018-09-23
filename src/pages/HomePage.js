@@ -3,30 +3,8 @@ import "../stylesheets/homeStyle.css";
 import "../stylesheets/global/globalStyle.css"
 import Footer from "../Footer";
 
-import posed from "react-pose";
-
-const FadeDiv = posed.div({
-    visible: { opacity: 1 },
-    hidden: { opacity: 0 }
-})
-const FadeP = posed.p({
-    visible: { opacity: 1 },
-    hidden: { opacity: 0 }
-})
-
 class HomePage extends Component {
-    constructor(props) {
-        super(props);
-        this.state = { isShowing: false }
-    }
-    componentDidMount() {
-        setTimeout(() => {
-            this.setState({isShowing: true});
-        }, 500);
-    }
-
     render() {
-        let pose= this.state.isShowing ? "visible" : "hidden";
         return (
             <div className="home-page">
                 <div className="home-main-container">
@@ -35,11 +13,11 @@ class HomePage extends Component {
                     { /* Create navigation bar --> */ }
                     { /* Content that is in the home page, when user first loads screen --> */ }
                     <div id="home-main-text-container">
-                        <FadeDiv id="home-main-title" pose={pose}>Falcotronix</FadeDiv>
-                        <FadeP id="home-main-subtitle" pose={pose}>
+                        <div id="home-main-title">Falcotronix</div>
+                        <p id="home-main-subtitle">
                             Team 7052 is a competitive robotics team from St. Ignatius High School and provides opportunities for all students to experience real world engineering through robotics.
-                        </FadeP>
-                        <FadeP id="home-main-location" pose={pose}>Located in Thunder Bay, Ontario</FadeP>
+                        </p>
+                        <p id="home-main-location">Located in Thunder Bay, Ontario</p>
                     </div>
                 </div>
 
