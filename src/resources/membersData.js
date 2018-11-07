@@ -1,101 +1,150 @@
 let TeamMembers = [
     {
         name: "Kevin Bai",
-        role: "Team Director",
-        grade: "11",
+        role: "Team President",
+        grade: "12",
         email: "kevin.bai@tbcschools.ca",
-        description: ""
+        isLead: true
     },
     {
         name: "Lucas Crupi",
-        role: "Design Lead",
-        grade: "9",
+        role: "Team Vice President",
+        grade: "10",
         email: "lucas.crupi@tbcschools.ca",
-        description: ""
+        isLead: true
     },
     {
         name: "Caleb Lammers",
         role: "Programming Lead",
-        grade: "11",
+        grade: "12",
         email: "caleb.lammers@tbcschools.ca",
-        description: ""
+        isLead: true
     },
     {
-        name: "Joshua Grasley",
-        role: "Electrical Lead",
+        name: "Leo Pernia",
+        role: "Business Lead",
         grade: "12",
-        email: "joshua.grasley@tbcschools.ca",
-        description: "",
+        email: "leo.pernia@tbcschools.ca",
+        isLead: true
+    },
+    {
+        name: "Antonio Pucci",
+        role: "Design Lead",
+        grade: "12",
+        email: "antonio.pucci@tbcschools.ca",
+        isLead: true
     },
     {
         name: "Samuel Sousa",
         role: "Manufacturing Lead",
-        grade: "11",
+        grade: "12",
         email: "samuel.sousa@tbcschools.ca",
-        description: ""
-    },
-    {
-        name: "Leo Pernia",
-        role: "Team Identity Lead",
-        grade: "11",
-        email: "leo.pernia@tbcschools.ca",
-        description: ""
-    },
-    {
-        name: "Matthew Richard",
-        role: "Electrical Team",
-        grade: "11",
-        email: "matthew.richard@tbcschools.ca",
-        description: ""
-    },
-    {
-        name: "Antonio Pucci",
-        role: "Design Team",
-        grade: "11",
-        email: "antonio.pucci@tbcschools.ca",
-        description: ""
-    },
-    {
-        name: "Jamie Grasley",
-        role: "Electrical Team",
-        grade: "9",
-        email: "jamie.grasley@tbcschools.ca",
-        description: ""
-    },
-    {
-        name: "Mark Grandell",
-        role: "Manufacturing Team",
-        grade: "11",
-        email: "mark.grandell@tbcschools.ca",
-        description: ""
-    },
-    {
-        name: "Alexander Alexandrov",
-        role: "Electrical Team",
-        grade: "11",
-        email: "alex.alexandrov@tbcschools.ca",
-        description: ""
+        isLead: true
     },
     {
         name: "Jason Lee",
-        role: "Public Relations Team",
-        grade: "10",
+        role: "Financial Director",
+        grade: "11",
         email: "jason.lee@tbcschools.ca",
-        description: ""
+        isLead: false
     },
     {
-        name: "Matteo Veneruz",
+        name: "Alexander Alexandrov",
         role: "Design Team",
-        grade: "10",
-        email: "matteo.veneruz@tbcschools.ca",
-        description: ""
+        grade: "12",
+        email: "alex.alexandrov@tbcschools.ca",
+        isLead: false
     },
     {
-        name: "Thomas Caron",
+        name: "Kiara Bergagnini",
+        role: "Manufacturing Team, Programming Team",
+        grade: "11",
+        email: "kiara.bergagnini@tbcschools.ca",
+        isLead: false
+    },
+    {
+        name: "Antwone Chiodl",
+        role: "Design Team",
+        grade: "9",
+        email: "antwone.chiodl@tbcschools.ca",
+        isLead: false
+    },
+    {
+        name: "Emma Covello",
+        role: "Manufacturing Team",
+        grade: "11",
+        email: "kiara.bergagnini@tbcschools.ca",
+        isLead: false
+    },
+    {
+        name: "Jamie Grasley",
+        role: "Manufacturing Team",
+        grade: "11",
+        email: "jamie.grasley@tbcschools.ca",
+        isLead: false
+    },
+    {
+        name: "Dawson Kortes-Miller",
+        role: "Programming Team",
+        grade: "9",
+        email: "dawson.kortes@tbcschools.ca",
+        isLead: false
+    },
+    {
+        name: "Ethan Lammers",
+        role: "Programming Team",
+        grade: "9",
+        email: "ethan.lammers@tbcschools.ca",
+        isLead: false
+    },
+    {
+        name: "Justin Lee",
+        role: "Programming Team",
+        grade: "9",
+        email: "justin.lee@tbcschools.ca",
+        isLead: false
+    },
+    {
+        name: "Matthew Pollock",
+        role: "Manufacturing Team",
+        grade: "9",
+        email: "matthew.pollock@tbcschools.ca",
+        isLead: false
+    },
+    {
+        name: "Zachary Scollie",
         role: "Programming Team",
         grade: "10",
-        email: "thomas.caron@tbcschools.ca",
-        description: ""
-    }
+        email: "zachary.scollie@tbcschools.ca",
+        isLead: false
+    },
+    {
+        name: "Noah Strickland",
+        role: "Manufacturing Team",
+        grade: "9",
+        email: "noah.strickland@tbcschools.ca",
+        isLead: false
+    },
+    {
+        name: "Ethan Wilmore",
+        role: "Manufacturing Team",
+        grade: "11",
+        email: "kiara.bergagnini@tbcschools.ca",
+        isLead: false
+    },
+    {
+        name: "Daisy Xiao",
+        role: "Programming Team",
+        grade: "11",
+        email: "daisy.xiao@tbcschools.ca",
+        isLead: false
+    },
+    {
+        name: "Jack Zhang",
+        role: "Programming Team",
+        grade: "9",
+        email: "jack.zhang@tbcschools.ca",
+        isLead: false
+    },
 ]
 export default TeamMembers;
