@@ -1,27 +1,15 @@
 let TeamMentors = [
     {
-        name: "Paul Rozon",
-        role: "Lead Mentor",
-        email: "prozon@tbcschools.ca",
-        description: ""
-    },
-    {
-        name: "Andrew Schach",
-        role: "Mentor",
-        email: "aschach@tbcschools.ca",
-        description: ""
-    },
-    {
         name: "Kris Turcotte",
-        role: "Manufacturing Mentor",
+        role: "Lead Mentor",
         email: "kturcotte@tbcschools.ca",
-        description: ""
+        isLead: false
     },
     {
-        name: "Matthew Simko",
-        role: "Mentor",
-        email: "",
-        description: ""
-    }
+        name: "Mike Ianni",
+        role: "Design Mentor",
+        email: "mianni@tbcschools.ca",
+        isLead: false
+    },
 ];
 export default TeamMentors;

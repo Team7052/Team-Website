@@ -18,7 +18,8 @@ class AboutMembers extends Component {
                             if (currentIndex <= 0 && !incrementing) incrementing = true;
                             let index = member.isLead ? currentIndex : (incrementing ? currentIndex++ : currentIndex--);
                             console.log(index + " " + this.colours.length + " " + incrementing);
-                            return <Member isMentor={this.props.subsection === "Member"} info={member} key={i} backgroundColor={this.colours[index]}/>
+                            console.log(this.props.subsection);
+                            return <Member isMentor={this.props.subsection === "Mentors"} info={member} key={i} backgroundColor={this.colours[index]}/>
                         })
                     }
                 </div>
