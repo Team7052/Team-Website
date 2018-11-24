@@ -63,10 +63,17 @@ let TeamMembers = [
         isLead: false
     },
     {
-        name: "Antwone Chiodl",
+        name: "Antwone Chiodo",
         role: "Design Team",
         grade: "9",
-        email: "antwone.chiodl@tbcschools.ca",
+        email: "antwone.chiodo@tbcschools.ca",
+        isLead: false
+    },
+    {
+        name: "Luke Coughlin",
+        role: "Design Team",
+        grade: "9",
+        email: "luke.coughlin@tbcschools.ca",
         isLead: false
     },
     {
@@ -74,6 +81,13 @@ let TeamMembers = [
         role: "Manufacturing Team",
         grade: "11",
         email: "kiara.bergagnini@tbcschools.ca",
+        isLead: false
+    },
+    {
+        name: "Daniel Fredrickson",
+        role: "Programming Team",
+        grade: "9",
+        email: "daniel.fredrickson@tbcschools.ca",
         isLead: false
     },
     {
@@ -88,6 +102,13 @@ let TeamMembers = [
         role: "Programming Team",
         grade: "9",
         email: "dawson.kortes@tbcschools.ca",
+        isLead: false
+    },
+    {
+        name: "Matthew Hertz",
+        role: "Design Team",
+        grade: "9",
+        email: "matthew.hertz@tbcschools.ca",
         isLead: false
     },
     {
@@ -109,6 +130,27 @@ let TeamMembers = [
         role: "Manufacturing Team",
         grade: "9",
         email: "matthew.pollock@tbcschools.ca",
+        isLead: false
+    },
+    {
+        name: "Brahm Langille",
+        role: "Programming Team",
+        grade: "9",
+        email: "brahm.langille@tbcschools.ca",
+        isLead: false
+    },
+    {
+        name: "Patrick Marcotte",
+        role: "Programming Team",
+        grade: "9",
+        email: "patrick.marcotte@tbcschools.ca",
+        isLead: false
+    },
+    {
+        name: "Sam Ostojic",
+        role: "Programming Team",
+        grade: "9",
+        email: "sam.ostojic@tbcschools.ca",
         isLead: false
     },
     {
