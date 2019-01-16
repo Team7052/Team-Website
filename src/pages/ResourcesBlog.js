@@ -9,7 +9,7 @@ class ResourcesBlog extends Component {
             <div className="section-wrapper">
                 <PageTemplate pageTitle={this.props.sectionName} pageSubtitle={this.props.subsection} pageInfo={this.props.sectionKeys}/>
                 <div id="blog-section">
-                    View our blog on <a href="https://www.medium.com/@falcotronix">Medium</a>
+                    View our blog on <a href="https://medium.com/@falcotronix_68383">Medium</a>
                 </div>
                 <Footer/>
             </div>
