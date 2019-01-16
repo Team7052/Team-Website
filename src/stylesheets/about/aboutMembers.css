@@ -110,6 +110,7 @@ div.member-overlay-view>.member-item {
   div.member-container>div.member-name {
     font-size: 1.5vw;
     width: 90%;
+    margin: 0 5%;
   }
   div.member-overlay-view>.member-item {
     font-size: 1.2vw;

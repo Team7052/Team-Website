@@ -13,7 +13,7 @@ class AboutMembers extends Component {
                 <PageTemplate pageTitle={this.props.sectionName} pageSubtitle={this.props.subsection} pageInfo={this.props.sectionKeys} />
                 <div id="about-members-section">
                     {
-                        this.props.data.members.map((member, i) => {
+                        this.props.data.map((member, i) => {
                             if (currentIndex >= this.colours.length - 1 && incrementing) incrementing = false;
                             if (currentIndex <= 0 && !incrementing) incrementing = true;
                             let index = member.isLead ? currentIndex : (incrementing ? currentIndex++ : currentIndex--);
@@ -41,12 +41,14 @@ class Member extends Component {
 
     memberComponent() {
         let containerClass = this.props.info.isLead ? "member-container" : "member-container without-image"
+        let imageURL = this.props.info["image url"];
+
         return (
             <div className={containerClass} style={{
                 backgroundColor: this.props.backgroundColor
             }}>
                 {
-                    this.props.info.isLead ? <img className="member-image" src={"/images/memberImages/" + this.props.info.name + ".png"} alt={this.props.info.name}/> : ""
+                    this.props.info["is lead"] ? <img className="member-image" src={/*"/images/memberImages/" + this.props.info.name + ".png"*/imageURL} alt={this.props.info.name}/> : ""
                 }
                 <div className="member-name">{this.props.info.name}</div>
                 <div className="member-overlay-view">

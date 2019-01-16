@@ -171,7 +171,7 @@ let TeamMembers = [
         name: "Ethan Wilmore",
         role: "Manufacturing Team",
         grade: "11",
-        email: "kiara.bergagnini@tbcschools.ca",
+        email: "ethan.wilmore@tbcschools.ca",
         isLead: false
     },
     {

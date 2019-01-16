@@ -23,17 +23,17 @@ import SponsorsData from "./resources/SponsorsData";
 const pageDocument = {
     About: [
         { name: "The Team", link: "/about/team", component: AboutTheTeam, data: {}},
-        { name: "Members", link: "/about/members", component: AboutMembers , data: {members: TeamMembers}},
-        { name: "Mentors", link: "/about/mentors", component: AboutMembers, data: {members: TeamMentors}},
+        { name: "Members", link: "/about/members", component: AboutMembers , data: [/*members: TeamMembers*/]},
+        { name: "Mentors", link: "/about/mentors", component: AboutMembers, data: [/*members: TeamMentors*/]},
     ],
     Media: [
         {name: "Gallery", link: "/media/gallery", component: MediaGallery, data: {gallery: GalleryPhotos}},
         {name: "Social", link: "/media/social", component: MediaSocial, data: {}}
     ],
     Sponsors: [
-        {name: "Platinum", link: "/sponsors/platinum", component: Sponsors, data: SponsorsData},
-        {name: "Gold", link: "/sponsors/gold", component: Sponsors, data: SponsorsData},
-        {name: "Silver", link: "/sponsors/silver", component: Sponsors, data: SponsorsData}
+        {name: "Platinum", link: "/sponsors/platinum", component: Sponsors, data: []/*SponsorsData*/},
+        {name: "Gold", link: "/sponsors/gold", component: Sponsors, data: []/*SponsorsData*/},
+        {name: "Silver", link: "/sponsors/silver", component: Sponsors, data: []/*SponsorsData*/}
     ],
     Resources: [
         {name: "Blog", link: "/resources/blog", component: ResourcesBlog, data: {}}
