@@ -48,9 +48,10 @@ class Sponsors extends Component {
 
 class PlatinumGoldSponsor extends Component {
     render() {
+        console.log(this.props);
         return (
             <div className="major-sponsor-item">
-                <img src={"/images/sponsorImages/" + this.props.sponsor.company + ".png"} className="major-sponsor-item-image" alt="not found" />
+                <img src={this.props.sponsor["logo url"]} className="major-sponsor-item-image" alt="not found" />
                 <div className="major-sponsor-item-title">{this.props.sponsor.company}</div>
                 <div className="major-sponsor-item-description">{this.props.sponsor.description}</div>
                 <a className="major-sponsor-item-link underlined-link" href={this.props.sponsor.link} target="_blank">See Site</a>
@@ -62,7 +63,7 @@ class SilverBronzeSponsor extends Component {
     render() {
         return (
             <div className="minor-sponsor-item">
-                <img className="minor-sponsor-item-image" src={"/images/sponsorImages/" + this.props.sponsor.company + ".png"} alt="not found" />
+                <img className="minor-sponsor-item-image" src={this.props.sponsor["logo url"]} alt="not found" />
                 
                 <div className="minor-sponsor-other-content">
                     <div className="minor-sponsor-item-title">{this.props.sponsor.company}</div>
